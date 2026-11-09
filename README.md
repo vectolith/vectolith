@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./assets/vectolith-banner.png" alt="VECTOLITH — Vector Intelligence & Monolithic Systems Architecture" width="820" />
+<img src="./assets/vectolith-wireframe.svg" alt="VECTOLITH" width="240" />
 
-<br />
+# V E C T O L I T H
 
 **Autonomous Personal AI Systems · Latent Vector Intelligence · Self-Custodial Cryptography**
 
@@ -18,7 +18,7 @@
 
 | System | Architecture | Surface | Status |
 | :--- | :--- | :--- | :--- |
-| **[Velnor](https://github.com/vectolith/velnor)** | Fine-tuned `velnor-core-v1` rsLoRA adapter (12-domain executive curriculum) + multi-provider AI router for quantitative reasoning, code architecture, document RAG, Google Workspace triage, and travel execution | Headless Messaging (`iMessage`, `SMS`, `Siri`, `Slack`) | `Active` |
+| **[Velnor](https://github.com/vectolith/velnor)** | Fine-tuned `velnor-coder-v2` rsLoRA adapter (12-domain full-stack engineering & quantitative curriculum) + multi-provider AI router for code generation, document RAG, Google Workspace triage, and travel execution | Headless Messaging (`iMessage`, `SMS`, `Siri`, `Slack`) | `Active` |
 | **[Blud](https://github.com/vectolith/blud)** | Autonomous coordinator & isolated cloud browser worker (`Kernel`) with client-encrypted secret vault autofill | Headless Messaging (`Linq iMessage`) | `Active` |
 | **[PLUCO Network](https://github.com/vectolith/pluco-network)** | Curated digital ownership network and editorial provenance surface built on Next.js 16 & React 19 | Web / Static Export | `Active` |
 | **VaultETH** | Executive, self-custodial multi-chain cryptographic vault — zero accounts, zero cloud dependency, zero telemetry | Native Mobile (`iOS`, `Android`) | `Private` |
