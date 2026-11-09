@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/vectolith-wireframe.svg" alt="VECTOLITH" width="240" />
+<img src="./assets/vectolith-icon.svg" alt="VECTOLITH" width="220" />
 
 # V E C T O L I T H
 
