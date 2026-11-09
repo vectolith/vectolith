@@ -18,7 +18,7 @@
 
 | System | Architecture | Surface | Status |
 | :--- | :--- | :--- | :--- |
-| **[Velnor](https://github.com/vectolith/velnor)** | Fine-tuned `velnor-coder-v2` rsLoRA adapter (12-domain full-stack engineering & quantitative curriculum) + multi-provider AI router for code generation, document RAG, Google Workspace triage, and travel execution | Headless Messaging (`iMessage`, `SMS`, `Siri`, `Slack`) | `Active` |
+| **[Velnor](https://github.com/vectolith/velnor)** | 1.5B Quantitative Reasoning & Software Architecture Engine (`Qwen2.5-Coder-1.5B-Instruct` + `velnor-coder-v2`) + multi-provider AI router for first-principles math, code synthesis, document RAG, and workspace triage | Headless Messaging (`iMessage`, `SMS`, `Siri`, `Slack`) | `Active` |
 | **[Blud](https://github.com/vectolith/blud)** | Autonomous coordinator & isolated cloud browser worker (`Kernel`) with client-encrypted secret vault autofill | Headless Messaging (`Linq iMessage`) | `Active` |
 | **[PLUCO Network](https://github.com/vectolith/pluco-network)** | Curated digital ownership network and editorial provenance surface built on Next.js 16 & React 19 | Web / Static Export | `Active` |
 | **VaultETH** | Executive, self-custodial multi-chain cryptographic vault — zero accounts, zero cloud dependency, zero telemetry | Native Mobile (`iOS`, `Android`) | `Private` |
