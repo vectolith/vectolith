@@ -6,7 +6,7 @@
 
 **Autonomous Personal AI Systems · Latent Vector Intelligence · Self-Custodial Cryptography**
 
-[Vectolith](https://github.com/vectolith/vectolith-network) · [Velnor](https://github.com/vectolith/velnor) · [Blud](https://github.com/vectolith/blud)
+[PLUCO Network](https://github.com/vectolith/pluco-network) · [Velnor](https://github.com/vectolith/velnor) · [Blud](https://github.com/vectolith/blud)
 
 </div>
 
@@ -20,7 +20,7 @@
 | :--- | :--- | :--- | :--- |
 | **[Velnor](https://github.com/vectolith/velnor)** | Fine-tuned `velnor-core-v1` rsLoRA adapter (12-domain executive curriculum) + multi-provider AI router for quantitative reasoning, code architecture, document RAG, Google Workspace triage, and travel execution | Headless Messaging (`iMessage`, `SMS`, `Siri`, `Slack`) | `Active` |
 | **[Blud](https://github.com/vectolith/blud)** | Autonomous coordinator & isolated cloud browser worker (`Kernel`) with client-encrypted secret vault autofill | Headless Messaging (`Linq iMessage`) | `Active` |
-| **[Vectolith](https://github.com/vectolith/vectolith-network)** | Curated digital ownership network and editorial provenance surface built on Next.js 16 & React 19 | Web / Static Export | `Active` |
+| **[PLUCO Network](https://github.com/vectolith/pluco-network)** | Curated digital ownership network and editorial provenance surface built on Next.js 16 & React 19 | Web / Static Export | `Active` |
 | **VaultETH** | Executive, self-custodial multi-chain cryptographic vault — zero accounts, zero cloud dependency, zero telemetry | Native Mobile (`iOS`, `Android`) | `Private` |
 | **AERYN** | Autonomous intelligence & deep research synthesis engine | Internal Runtime | `Private` |
 
