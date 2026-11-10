@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vectolith Security Advisories
+    url: https://github.com/vectolith/.github/security/advisories
+    about: Please report security vulnerabilities privately.
+  - name: Velnor Headless AI Documentation
+    url: https://github.com/vectolith/velnor#readme
+    about: Explore documentation for Velnor's headless messaging and LoRA inference.
+  - name: Base Mainnet Art Protocol
+    url: https://basescan.org/address/0x1f49c091da217f73493a5b517f490865dbabe15d
+    about: Inspect live Vectolith smart contracts on Base.
