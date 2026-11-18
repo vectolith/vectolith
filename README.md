@@ -32,7 +32,7 @@ The company may establish consistent security, privacy, legal, documentation and
 | [NYR](https://github.com/vectolith/NYR) | Independent from-scratch x86-64 operating-system project | Early-kernel milestone; not a complete general-purpose OS |
 | [Cipher Messenger](https://github.com/vectolith/Cipher-messenger) | Standalone encrypted messaging product initiative | Early Matrix/Synapse E2EE validation; not a released messaging product |
 | [Quietline Messenger](https://github.com/vectolith/quietline-messenger) | Standalone encrypted messaging product initiative | Early Matrix/Synapse E2EE validation; not a released messaging product |
-| [AERYN](https://github.com/vectolith/AERYN) (private source) | Independent autonomous intelligence and deep-research product initiative | Initial charter/specification stage; implementation and release maturity are not established |
+| [AERYN](https://github.com/vectolith/AERYN) (private source) | Independent on-chain generative-art/ERC-721 collection | Solidity source defines a 100-token owner-minted collection with on-chain SVG metadata; no live Base deployment is claimed |
 
 Repository visibility and maturity are separate: private source does not mean a private product, and public source does not mean a released product. The [portfolio register](docs/PORTFOLIO_REGISTER.md) records repository classification, product-specific evidence and outstanding gates.
 
@@ -46,7 +46,7 @@ Repository visibility and maturity are separate: private source does not mean a 
 6. **Responsible operations:** prefer free and open-source infrastructure where viable; do not introduce paid services or paid quotas without explicit authorization.
 7. **Clear release status:** distinguish research, development, prototype, beta, production and discontinued capabilities.
 
-Optional integrations may be offered when they add real user value, but they must be explicitly enabled, replaceable and nonessential to the integrating product's core purpose. No product may rely on another Vectolith product's runtime, identity service, database, credentials or deployment to function.
+No product-to-product integration is part of the default architecture. A future integration requires separate explicit approval, must be replaceable and must remain nonessential to each product's core purpose. No product may rely on another Vectolith product's runtime, identity service, database, credentials or deployment to function.
 
 See the [company-wide engineering and release governance](docs/ENGINEERING_GOVERNANCE.md) and [security policy](SECURITY.md).
 
