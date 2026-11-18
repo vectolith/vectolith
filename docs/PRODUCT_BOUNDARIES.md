@@ -26,7 +26,9 @@ This document defines product responsibilities to reduce accidental duplication.
 - Remains a distinct Vectolith product with its own user-facing product identity and release lifecycle.
 - When used alongside Velnor, Blud should expose browser execution through a narrow, authenticated capability contract. Velnor may plan and coordinate; Blud performs the browser-specialist work and returns structured execution evidence.
 - Browser credentials and secrets must remain outside model context. Browser execution must enforce user authorization and report proposed, attempted, completed, failed or unknown outcomes accurately.
-- The integration described above is a target boundary, not a claim that a production Velnor–Blud integration exists.
+- **Verified implementation gap:** Velnor contains `src/lib/tools/bludBridge.ts`, but Blud's current `app/api/internal/browser-worker/route.ts` initializes the Kernel SDK without executing a browser action and returns a success-shaped response. This is not a working browser integration and must not be treated as one.
+- Paired corrective changes are proposed in [Blud PR #3](https://github.com/vectolith/blud/pull/3) and [Velnor PR #33](https://github.com/vectolith/velnor/pull/33). They remove fabricated success, require internal authentication and require a verifiable completion receipt. They deliberately leave the integration unavailable until the actual browser-agent runtime is connected.
+- The proposed Velnor–Blud responsibility boundary is a target architecture, not a claim that a production integration exists.
 
 ## 3. Models by Vectolith — model ecosystem
 
