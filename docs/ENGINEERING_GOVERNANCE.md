@@ -14,7 +14,6 @@ This document defines minimum company-wide engineering controls. It does not rep
 5. **Least privilege and isolation.** Credentials, tenant data, signing keys, model artifacts and deployment permissions must be scoped to the minimum required.
 6. **Reproducibility.** Builds, evaluations, deployments and releases must identify source revision, configuration and dependencies.
 7. **Honest maturity.** A demo, prototype, passing unit test, successful build or configured workflow is not equivalent to production readiness.
-8. **Cost transparency.** Every product records mandatory paid dependencies and legitimate free-tier constraints. Product-specific zero-budget requirements cannot be bypassed.
 
 ## 2. Minimum repository requirements
 
@@ -25,7 +24,7 @@ Every maintained product repository must contain or link to:
 - A threat model appropriate to its assets and capabilities.
 - A security reporting policy and supported-version policy.
 - A license/copyright/ownership declaration consistent with company records.
-- A dependency and deployment requirements section, including cost-bearing services.
+- A dependency and deployment requirements section, including operational dependencies and service limits.
 - A test and verification guide with reproducible commands.
 - A release checklist and change history.
 - A data, privacy and retention description where user data is processed.
@@ -49,7 +48,7 @@ A project may move through these gates only when the required evidence is record
 - Requirements and non-goals are explicit.
 - Architecture, data flows and trust boundaries are documented.
 - Threat model and privacy considerations are recorded.
-- External services, licenses, costs and operational assumptions are listed.
+- External services, licenses, operational assumptions and service limits are listed.
 - Acceptance criteria are measurable.
 
 ### Gate 2 — Implementation
@@ -165,14 +164,9 @@ For blockchain products:
 - Preserve reproducible artifacts and provenance for releases.
 - If a check cannot run due to permissions, quota or external dependency, state the exact limitation; do not mark it as passed.
 
-## 8. Cost and dependency register
+## 8. External dependency register
 
-Each product must maintain a table of:
-
-| Dependency | Purpose | Required tier/cost | Free alternative | Quota/limit | Failure behaviour |
-|---|---|---|---|---|---|
-
-Do not label a product zero-cost when a mandatory dependency requires a paid tier. The Models by Vectolith programme has a strict zero-budget constraint: no paid APIs, inference, compute, trials or infrastructure; only legitimate free resources, open-weight/local execution within actual hardware and free-tier quotas. No quota bypass, account rotation or disguised paid services.
+Each product must identify its external services and operational dependencies, including purpose, authentication boundary, service limits, data exposure, failure behaviour and any viable fallback. Do not assume a service is available or unlimited; verify its actual terms and quotas before relying on it.
 
 ## 9. Exceptions and waivers
 
@@ -187,7 +181,7 @@ At least once per release cycle, review:
 - Open critical/high risks and security advisories.
 - CI coverage and latest successful commit.
 - Deployment evidence and release support.
-- Paid dependencies and free-tier constraints.
+- External dependencies, service limits and fallback behaviour.
 - Legal ownership, licenses and data rights.
 - Duplicated or abandoned repositories.
 
