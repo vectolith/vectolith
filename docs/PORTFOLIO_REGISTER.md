@@ -78,13 +78,13 @@ Do not use "Active" as a substitute for maturity. Record lifecycle stage and rel
 
 ## Known cross-project risks requiring resolution
 
-1. **Portfolio source of truth:** the company README omits projects and contains architecture/status descriptions that do not match all current repository READMEs.
+1. **Portfolio source of truth:** keep the company README synchronized with this detailed register; the register is authoritative when the summary and repository-level documentation differ.
 2. **Blud/Velnor overlap:** define which product owns messaging orchestration, browser execution, memory, scheduling, and integration contracts.
 3. **PLUCO deployment contradiction:** reconcile the listed Base deployment addresses against the statement that no contracts are deployed. Require chain ID, transaction hashes, deployer/owner, verified source, bytecode match, and deployment commit.
 4. **VaultETH ownership:** repository copyright identifies `pluco.dev`, while it is presented as a Vectolith product. Record the legal owner, license authority and any assignment or licence.
 5. **Cipher/Quietline duplication:** establish whether the products have distinct threat models, user groups, protocols or product requirements.
 6. **AERYN specification gap:** do not represent it as an implemented autonomous research engine until evidence exists.
-8. **Cost and dependency transparency:** record required paid tiers, free-tier quotas, external providers and failure modes per product. The Models by Vectolith zero-budget constraint remains absolute for that project.
+7. **Cost and dependency transparency:** record required paid tiers, free-tier quotas, external providers and failure modes per product. The Models by Vectolith zero-budget constraint remains absolute for that project.
 
 ## Maintenance
 
