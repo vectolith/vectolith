@@ -19,7 +19,7 @@ Ten PRs have been merged into their respective repository's `main` during this c
 | Velnor | #40 | Standalone public-product and security baseline | Documentation-only; clean branch from `main`, two files reviewed. |
 | Models by Vectolith | #79 | Remove downstream runtime assumptions | Runtime and evaluation tests passed on the exact head. |
 | Models by Vectolith | #80 | Independent model product readiness and security baseline | Documentation-only; clean branch from `main`, two files reviewed. |
-| Vectolith | #5 | Public portfolio, standalone product boundaries, readiness and security governance | Documentation-only; rebuilt from `main`; public-only portfolio and audit; no private repository locations or budget figures. |
+| Vectolith | #5 | Public portfolio, standalone product boundaries, readiness and security governance | Documentation-only; rebuilt from `main`; public-only portfolio and audit; no private repository locations. |
 | NYR | #8 | Standalone OS and kernel security baseline | Documentation-only; clean branch from `main`, two files reviewed. |
 | Blud | #9 | Standalone personal-agent, browser and credential security baseline | Documentation-only; clean branch from `main`, two files reviewed. |
 | Pluco | #11 | Base V1 deployment verification and runtime-bytecode regression tests | Latest CI passed on exact head: contract verification run 44389773943 and build run 44389773952. Preserved V2 source/tests; verifier remains scoped to V1. |
@@ -58,7 +58,7 @@ Discovered non-main branches in the six public repositories were compared with t
 | Repository | Current consolidation state |
 |---|---|
 | [Pluco](https://github.com/vectolith/pluco-network) | PRs #11 and #12 merged. Remaining old feature/deployment branches are not blanket-merge candidates; review contract, marketplace and deployment changes by feature. |
-| [Vectolith](https://github.com/vectolith/vectolith) | PR #5 merged. Public company profile, portfolio register, readiness standard, security policy and repository snapshot now describe independent products without exposing private repository locations or budget figures. |
+| [Vectolith](https://github.com/vectolith/vectolith) | PR #5 merged. Public company profile, portfolio register, readiness standard, security policy and repository snapshot now describe independent products without exposing private repository locations. |
 | [Blud](https://github.com/vectolith/blud) | PR #9 merged. PR #8 is the narrow quality/security patch but remains blocked on fresh CI. PR #1/#2 are large stacked branches and are not merge-ready. The old standards branch contains unrelated browser-worker/dashboard changes and is not merged wholesale. |
 | [Velnor](https://github.com/vectolith/velnor) | PRs #32, #35 and #40 merged. PR #31 remains blocked. Other delivery/security branches require dependency-aware review before new PRs are opened. |
 | [NYR](https://github.com/vectolith/NYR) | PR #8 merged. The old standards branch also contains physical-memory allocator and heap changes; its latest CI failed at host memory-manager tests, so those code changes remain unmerged. |
