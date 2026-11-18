@@ -6,7 +6,7 @@
 
 **Autonomous Intelligence · Applied Systems Engineering · Digital Ownership**
 
-[Independent Product Portfolio](docs/PORTFOLIO_REGISTER.md) · [Product Boundaries](docs/PRODUCT_BOUNDARIES.md) · [Engineering Governance](docs/ENGINEERING_GOVERNANCE.md) · [Security Policy](SECURITY.md)
+[Independent Product Portfolio](docs/PORTFOLIO_REGISTER.md) · [Public Product Standard](PUBLIC_PRODUCT_STANDARD.md) · [Repository Audit](REPOSITORY_AUDIT.md) · [Product Boundaries](docs/PRODUCT_BOUNDARIES.md) · [Engineering Governance](docs/ENGINEERING_GOVERNANCE.md) · [Security Policy](SECURITY.md)
 
 </div>
 
@@ -26,11 +26,11 @@ The company may establish consistent security, privacy, legal, documentation and
 |---|---|---|
 | [Velnor](https://github.com/vectolith/velnor) | General-purpose AI agent product with its own orchestration, integrations and execution runtime | Active development; production deployment and live-provider evidence must be assessed per release |
 | [Blud](https://github.com/vectolith/blud) | Standalone personal agent with browser automation and protected credential vault | Active development; its README documents deployment requirements and current production limitations |
-| [Models by Vectolith](https://github.com/vectolith/Models-by-vectolith.) | Model research and model product: specifications, foundation selection, training, evaluation, artifacts and releases | Research and infrastructure stage; no foundation selected and no student training/release claimed |
+| [Models by Vectolith](https://github.com/vectolith/Models-by-vectolith.) | Model research and model product: specifications, foundation selection, training, evaluation, artifacts and releases | Active research and evaluation infrastructure; no foundation selected, no student training run or public model release claimed |
 | [PLUCO Network](https://github.com/vectolith/pluco-network) | Independent digital-ownership protocol and marketplace | Contract deployment claims require independent chain verification; release evidence is maintained in its own repository |
-| [VaultETH](https://github.com/vectolith/VaultETH) | Independent native self-custodial wallet for iOS and Android | Mobile implementation with explicit real-money release gates; web surface is a demo sandbox |
+| [VaultETH](https://github.com/vectolith/VaultETH) | Independent native self-custodial wallet for iOS and Android | Public wallet product in development with private source; mobile release gates remain and no real-fund approval or store release is claimed |
 | [NYR](https://github.com/vectolith/NYR) | Independent from-scratch x86-64 operating-system project | Early-kernel milestone; not a complete general-purpose OS |
-| [Cipher Messenger](https://github.com/vectolith/Cipher-messenger) | Standalone encrypted messaging product initiative | Early Matrix/Synapse E2EE validation; not a released messaging product |
+| [Cipher Messenger](https://github.com/vectolith/Cipher-messenger) | Standalone encrypted messaging product initiative | Independent Matrix client with fail-closed E2EE sends and HTTPS homeserver validation; no managed public homeserver or release is verified |
 | [Quietline Messenger](https://github.com/vectolith/quietline-messenger) | Standalone encrypted messaging product initiative | Early Matrix/Synapse E2EE validation; not a released messaging product |
 | [AERYN](https://github.com/vectolith/AERYN) (private source) | Independent on-chain generative-art/ERC-721 collection | Solidity source defines a 100-token owner-minted collection with on-chain SVG metadata; no live Base deployment is claimed |
 
