@@ -1,6 +1,6 @@
 # Public Product Readiness Standard
 
-**Applies to:** This repository and every product, service, model, API, client, integration, and release maintained here.  
+**Applies to:** Every product, service, model, API, client, integration, and release maintained by Vectolith.  
 **Owner:** Vectolith  
 **Status:** Engineering baseline; implementation must be verified per project.
 
@@ -8,7 +8,9 @@
 
 Vectolith products are built for use by their intended public audiences. They are not assumed to be private prototypes or internal-only tools. Public consumption does not, by itself, mean that a source repository, service endpoint, dataset, or operational system must be publicly exposed. Repository visibility and deployment exposure must be deliberate security decisions.
 
-This standard is a required engineering baseline, not a claim that the repository already satisfies every requirement. Compliance must be established through implementation, tests, and review.
+Each product is independently buildable, deployable, maintainable, and useful. No Vectolith product is a mandatory runtime or infrastructure dependency of another by default. Integrations are optional and require an explicit decision, a documented and versioned interface, and a failure mode that preserves the consumer's core functionality.
+
+This standard is a required engineering baseline, not a claim that a repository already satisfies every requirement. Compliance must be established through implementation, tests, and review.
 
 ## Required release gates
 
@@ -22,7 +24,7 @@ A release must not be represented as production-ready until the applicable gates
 - Preserve data integrity across retries, concurrency, restarts, and partial failures where applicable.
 
 ### 2. Security and privacy
-- Never commit credentials, private keys, tokens, signing secrets, production data, or personal information. Use environment-based secret management and rotate exposed credentials.
+- Never commit credentials, private keys, tokens, signing secrets, production data, or personal information. Use protected secret storage and rotate exposed credentials.
 - Apply least privilege, secure defaults, authentication and authorization checks, and server-side enforcement for sensitive actions.
 - Encrypt sensitive data in transit and at rest where the platform supports it; minimize collection, retention, and access.
 - Document data categories, purposes, storage locations, retention, deletion, and third-party processors before launch.
@@ -42,6 +44,7 @@ A release must not be represented as production-ready until the applicable gates
 - Establish monitoring for availability, errors, latency, resource use, and critical workflows where operationally applicable.
 - Document backup, restore, migration, rollback, incident response, and disaster recovery procedures appropriate to the product.
 - Keep development, test, staging, and production configuration separate.
+- Identify external service dependencies, quotas, limits, and failure behavior. Never rely on quota circumvention.
 
 ### 5. Quality and verification
 - Provide repeatable setup and build instructions from a clean checkout.
@@ -67,11 +70,6 @@ For repositories that train, evaluate, distribute, or serve models or AI feature
 - Assess harmful outputs, prompt injection, data leakage, memorization, misuse, and failure modes relevant to the deployment context.
 - Clearly disclose model limitations and avoid unsupported claims about accuracy, safety, or capability.
 - Preserve raw evaluation evidence and dissenting results; do not select or suppress evidence solely to make a model appear better.
-
-### 8. Financial and dependency discipline
-- Prefer maintainable open standards and free/open-source dependencies where they meet the requirement.
-- Do not introduce paid APIs, infrastructure, trials, or services without explicit authorization.
-- Document operational dependencies, quotas, limits, and failure behavior. Never rely on quota circumvention.
 
 ## Repository-specific implementation
 
