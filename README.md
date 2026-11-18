@@ -22,19 +22,19 @@ The company may establish consistent security, privacy, legal, documentation and
 
 ## Portfolio
 
-| Product / project | Independent purpose | Current documented position |
+| Product | Independent purpose | Current documented position |
 |---|---|---|
 | [Velnor](https://github.com/vectolith/velnor) | General-purpose AI agent product with its own orchestration, integrations and execution runtime | Active development; production deployment and live-provider evidence must be assessed per release |
 | [Blud](https://github.com/vectolith/blud) | Standalone personal agent with browser automation and protected credential vault | Active development; its README documents deployment requirements and current production limitations |
-| [Models by Vectolith](https://github.com/vectolith/Models-by-vectolith.) | Model research and model product: specifications, foundation selection, training, evaluation, artifacts and releases | Active research and evaluation infrastructure; no foundation selected, no student training run or public model release claimed |
-| [PLUCO Network](https://github.com/vectolith/pluco-network) | Independent digital-ownership protocol and marketplace | Contract deployment claims require independent chain verification; release evidence is maintained in its own repository |
-| [VaultETH](https://github.com/vectolith/VaultETH) | Independent native self-custodial wallet for iOS and Android | Public wallet product in development with private source; mobile release gates remain and no real-fund approval or store release is claimed |
+| [Models by Vectolith](https://github.com/vectolith/Models-by-vectolith.) | Independent model research and model product: specifications, foundation selection, training, evaluation, artifacts and releases | Active research and evaluation; no foundation selection, student training run or public model release is claimed |
+| [Pluco](https://github.com/vectolith/pluco-network) | Independent digital-ownership protocol and marketplace | Contract deployment claims require independent chain verification; release evidence is maintained in its own repository |
 | [NYR](https://github.com/vectolith/NYR) | Independent from-scratch x86-64 operating-system project | Early-kernel milestone; not a complete general-purpose OS |
-| [Cipher Messenger](https://github.com/vectolith/Cipher-messenger) | Standalone encrypted messaging product initiative | Independent Matrix client with fail-closed E2EE sends and HTTPS homeserver validation; no managed public homeserver or release is verified |
-| [Quietline Messenger](https://github.com/vectolith/quietline-messenger) | Standalone encrypted messaging product initiative | Early Matrix/Synapse E2EE validation; not a released messaging product |
-| [AERYN](https://github.com/vectolith/AERYN) (private source; public collection development) | Independent on-chain generative-art/ERC-721 collection | Solidity source defines a 100-token owner-minted collection with on-chain SVG metadata; no live Base deployment is claimed |
+| VaultETH | Native self-custodial wallet for iOS and Android | Development-stage product; physical-device security, transaction and store-release gates remain |
+| Cipher Messenger | Encrypted messaging product | Development-stage client; managed public homeserver and release evidence are not verified |
+| Quietline Messenger | Encrypted messaging product | Development-stage client; managed public homeserver and release evidence are not verified |
+| AERYN | On-chain generative-art collection | Collection development; no production deployment or public mint is claimed |
 
-Repository visibility and maturity are separate: private source does not mean a private product, and public source does not mean a released product. The [portfolio register](docs/PORTFOLIO_REGISTER.md) records repository classification, product-specific evidence and outstanding gates.
+Repository visibility and product maturity are separate. Source visibility does not establish product availability, and a public product does not require its source repository or operational systems to be public. The [portfolio register](docs/PORTFOLIO_REGISTER.md) records product scope and release gates without exposing private repository locations.
 
 ## Engineering principles
 
@@ -43,10 +43,10 @@ Repository visibility and maturity are separate: private source does not mean a 
 3. **Real functionality:** do not present mock data, UI-only flows or unverified integrations as working production features.
 4. **Security and privacy:** apply least privilege, product-owned trust boundaries and honest data-flow disclosures.
 5. **Evidence-led releases:** require reproducible builds, tests, dependency review, security review and operational evidence per product.
-6. **Responsible operations:** prefer free and open-source infrastructure where viable; do not introduce paid services or paid quotas without explicit authorization.
+6. **Dependency discipline:** identify external services, limits and failure modes; do not rely on unverified service behaviour.
 7. **Clear release status:** distinguish research, development, prototype, beta, production and discontinued capabilities.
 
-No product-to-product integration is part of the default architecture. A future integration requires separate explicit approval, must be replaceable and must remain nonessential to each product's core purpose. No product may rely on another Vectolith product's runtime, identity service, database, credentials or deployment to function.
+No product-to-product integration is part of the default architecture. A future integration requires separate explicit approval, must be replaceable and must remain nonessential to each product's core purpose. No product may rely on another Vectolith product's runtime, identity service, database, credentials or deployment.
 
 See the [company-wide engineering and release governance](docs/ENGINEERING_GOVERNANCE.md) and [security policy](SECURITY.md).
 
