@@ -1,110 +1,108 @@
-# Vectolith product boundaries and ownership
+# Independent Vectolith product boundaries
 
-**Applies to:** Vectolith's product and research portfolio  
-**Status:** Portfolio architecture baseline; implementation claims are explicitly separated from intended boundaries.
+**Applies to:** Every Vectolith product and product initiative  
+**Status:** Mandatory architecture rule
 
-All products in this portfolio are Vectolith products. Each product keeps its own identity, roadmap, architecture, release lifecycle and acceptance criteria. Shared Vectolith standards govern security, privacy, provenance, interoperability and release evidence. Product ownership does not override applicable third-party licenses, contributor rights or copyright notices.
+## 1. Company identity is not a product dependency
 
-This document defines product responsibilities to reduce accidental duplication. A proposed interface or responsibility is not evidence that an integration has already been implemented.
+Vectolith is the company and ownership identity. It is not a shared runtime, platform, identity provider, data platform, orchestration service, or mandatory integration layer.
 
-## 1. Velnor — general-purpose agent platform
+Every Vectolith product is a standalone product. Each must be independently buildable, deployable, configurable, operable, maintainable, supportable, and usable for its stated purpose. A product must not require another Vectolith product to start, authenticate users, access its own data, perform its core functions, or release updates.
 
-**Product responsibility:** General-purpose intelligence orchestration, user and workspace context, integrations, task planning, tool routing, execution coordination, policy enforcement and activity reporting.
+Company-wide policies may define minimum security, privacy, accessibility, provenance, documentation and engineering standards. They must not impose shared credentials, shared databases, shared runtime processes, common deployment infrastructure, mandatory service APIs or synchronized release schedules.
 
-- Owns the common agent loop and orchestration contracts.
-- Owns channel and service integration contracts, tenant isolation and action lifecycle semantics.
-- Owns model-provider and released-model integration behind stable interfaces.
-- Its web and mobile companion interfaces are administration and control-centre surfaces for integrations, connection management, activity/execution monitoring, administration, permissions, security and system controls. They are not ordinary chat clients.
-- Does not own or subsume the independent NYR kernel research project.
-- Velnor OS is out of scope.
+## 2. Required independence invariants
 
-## 2. Blud — browser-oriented personal agent
+Every product owns and controls its own:
 
-**Product responsibility:** A focused personal-agent product whose distinguishing execution capability is browser automation and browser-session interaction.
+- Product requirements, user experience, roadmap and acceptance criteria.
+- Application code, runtime, process lifecycle and failure handling.
+- User identity, authentication, authorization, sessions and permissions.
+- Databases, files, encryption keys, secrets, retention and recovery.
+- Deployment configuration, infrastructure, monitoring and incident response.
+- External service accounts, credentials, quotas, billing and fallback behaviour.
+- CI, tests, release approvals, versioning, rollback and support lifecycle.
+- Security threat model, privacy disclosures and product-specific legal notices.
 
-- Owns browser-session lifecycle, browser action execution, page observation, browser-specific credential isolation and browser-task evidence.
-- Remains a distinct Vectolith product with its own user-facing product identity and release lifecycle.
-- When used alongside Velnor, Blud should expose browser execution through a narrow, authenticated capability contract. Velnor may plan and coordinate; Blud performs the browser-specialist work and returns structured execution evidence.
-- Browser credentials and secrets must remain outside model context. Browser execution must enforce user authorization and report proposed, attempted, completed, failed or unknown outcomes accurately.
-- **Verified implementation gap:** Velnor contains `src/lib/tools/bludBridge.ts`, but Blud's current `app/api/internal/browser-worker/route.ts` initializes the Kernel SDK without executing a browser action and returns a success-shaped response. This is not a working browser integration and must not be treated as one.
-- Paired corrective changes are proposed in [Blud PR #3](https://github.com/vectolith/blud/pull/3) and [Velnor PR #33](https://github.com/vectolith/velnor/pull/33). They remove fabricated success, require internal authentication and require a verifiable completion receipt. They deliberately leave the integration unavailable until the actual browser-agent runtime is connected.
-- The proposed Velnor–Blud responsibility boundary is a target architecture, not a claim that a production integration exists.
+A product may use external open-source libraries, infrastructure providers, model providers or optional third-party integrations. Such dependencies must be declared and justified. Dependencies on another Vectolith product are not presumed or required.
 
-## 3. Models by Vectolith — model ecosystem
+## 3. Optional integration rules
 
-**Product responsibility:** Foundation-model evaluation and selection, model-specific specifications, teacher qualification, training-data lineage, training, evaluation, model registry, artifacts and model release lifecycle.
+An optional product-to-product integration is permitted only when it adds a distinct user benefit and is explicitly chosen by the product owner. It must satisfy all of the following:
 
-- The model ecosystem is extensible; Core Prime and Core Prima are initial models, not the entire product.
-- Each model has its own specialization, objectives, evaluation criteria and release lifecycle while sharing Vectolith identity, behavioural and safety standards, communication/task formats and collaboration protocols.
-- Product runtimes such as Velnor remain responsible for authorization, permissions, tool execution and proof of external action.
-- No model is considered qualified or released without reproducible evaluation and provenance evidence.
-- Model training rights, dataset rights and teacher-output training permissions are separate gates.
+1. The integrating product works for its core purpose when the integration is disabled or unavailable.
+2. The integration is opt-in, replaceable and documented; no silent fallback may make it mandatory.
+3. Each product retains its own identity, authorization, data ownership, secrets and deployment.
+4. Communication uses a versioned, authenticated, least-privilege interface.
+5. Data shared is minimized, user-authorized where appropriate, and subject to documented retention/deletion rules.
+6. Failures, timeouts and partial results are handled without taking down the standalone product.
+7. Each product tests and releases its side independently. No cross-product synchronized deployment is required.
+8. The integration cannot expand the permissions of either product or bypass user approval.
 
-## 4. PLUCO Network — digital ownership protocol and marketplace
+A product must not be described as incomplete because it does not integrate with another Vectolith product.
 
-**Product responsibility:** Base-based digital-ownership protocol, collection registration, minting, marketplace rules, fees/royalties and associated web product surface.
+## 4. Product ownership and scope
 
-- Owns its smart-contract architecture, deployment registry, protocol economics and marketplace integration.
-- Contract deployments are not considered live until chain ID, transaction hashes, deployer, owner/admin roles, source revision, compiler settings, verified source and bytecode match are recorded.
-- Website configuration is not proof of deployment.
-- PLUCO's release gates are independent from VaultETH's wallet release gates.
+### Velnor — general-purpose AI agent
 
-## 5. VaultETH — self-custodial wallet
+Velnor owns its own agent loop, model-provider adapters, user/workspace context, integrations, tool execution, authorization, persistence, task lifecycle and operational runtime. It may optionally connect to external services or other products through explicit adapters. It must not require Models by Vectolith, Blud, or another Vectolith repository to operate.
 
-**Product responsibility:** Native iOS and Android self-custodial wallet clients, wallet creation/import, key protection, address derivation, signing, transaction validation, network support and wallet security.
+### Blud — personal browser agent
 
-- Owns wallet-specific key lifecycle, signing and recovery behaviour.
-- PLUCO may integrate with VaultETH as a wallet or transaction-signing client through explicit, user-approved interfaces; neither product's maturity implies the other's.
-- No simulated balance, demo price, disabled signing path or UI-only purchase/swap flow may be represented as a live capability.
-- Real-money release requires specialist security review and verified transaction behaviour.
+Blud owns its own agent application, browser execution, browser-session lifecycle, credential vault, user identity, storage, deployment and task evidence. It must operate as a standalone product. A Velnor-to-Blud browser bridge, if ever enabled, is an optional integration—not a required architecture or release dependency. Blud must remain usable without Velnor.
 
-## 6. Cipher Messenger and Quietline Messenger — separate messaging products
+### Models by Vectolith — model research and model product
 
-Both repositories remain Vectolith products. Their current README files are nearly identical Phase 0 Matrix/Synapse and end-to-end-encryption validation guides; the material difference is the local homeserver name (`cipher.local` versus `quietline.local`). The available documentation does not establish a defensible distinction in target user, threat model, product experience or protocol.
+This repository owns its model specifications, foundation selection, training data lineage, teacher qualification, evaluation, model registry, artifacts and model release lifecycle. Any runtime/package in this repository serves this model product's own development and evaluation needs; it is not a mandatory shared runtime for other Vectolith products.
 
-Until each product has an approved specification:
+Another product may optionally consume a released model through a documented model interface, but that product owns its own runtime, provider adapter, authorization, data handling and operational fallback. No product is required to use this model family.
 
-- Keep both repositories and histories intact; do not silently merge, archive or discard either.
-- Do not claim either is a released messaging product or that Phase 0 validation proves production E2EE.
-- Define separate user problems, threat models, supported clients, device-verification model, homeserver/federation posture, metadata/privacy expectations and release criteria.
-- Only after those specifications exist should shared infrastructure or protocol components be considered for reuse.
+### PLUCO Network — digital ownership protocol and marketplace
 
-## 7. AERYN — autonomous intelligence and research synthesis
+PLUCO owns its own smart contracts, deployment registry, protocol economics, marketplace application, wallet connection interface, data and operations. It must not require VaultETH or any other Vectolith product. Wallet interoperability, where offered, must use ordinary documented wallet standards and remain user-selectable.
 
-**Provisional product charter based on the existing portfolio description:** AERYN is a Vectolith autonomous intelligence and deep-research synthesis initiative.
+### VaultETH — self-custodial wallet
 
-Its first specification must define:
-- Intended users and research domains.
-- Source discovery, retrieval, provenance and citation requirements.
-- Evidence reconciliation, uncertainty handling and contradiction reporting.
-- Synthesis outputs, review workflow and export/integration contracts.
-- Tool permissions, data handling, privacy, threat model and audit trail.
-- Evaluation corpus, quality criteria and release gates.
+VaultETH owns its native iOS and Android clients, wallet creation/import, key lifecycle, secure storage, address derivation, signing, transaction validation, network support and release lifecycle. It must not require PLUCO or any other Vectolith product. It may connect to independent blockchain networks and user-selected external services under its own security and privacy controls.
 
-The repository's current minimal README does not establish that these capabilities are implemented. This charter is a scope definition for specification work, not a capability claim.
+### NYR — x86-64 operating system
 
-## 8. NYR — independent kernel research
+NYR owns its kernel, boot process, memory management, interrupt handling, scheduling, drivers, toolchain and systems validation. It is an independent operating-system project, not a runtime or infrastructure dependency for another Vectolith product.
 
-NYR is Vectolith's independent x86-64 kernel research project. It owns its kernel architecture, boot process, memory management, interrupt handling, scheduling, drivers and systems-level validation. It is not a Velnor OS initiative, not a dependency of Velnor, and must not be used to expand Velnor's product scope.
+### Cipher Messenger — encrypted messaging
 
-## 9. Repository classification
+Cipher owns its own messaging client, identity and device model, encryption state, homeserver configuration, storage, user experience and release lifecycle. It must operate independently and must not require Quietline or another Vectolith product.
 
-Not every repository is a customer-facing product. Company repositories, internal demos, templates and placeholders are Vectolith-managed portfolio assets and must be classified honestly; third-party licenses and contributor rights remain in force:
-- `vectolith` is the company and governance repository.
-- `demo-repository` is currently documented as an internal demonstration/template, not a released product.
-- `my-project` is currently an unclassified placeholder; no product capabilities should be inferred until its purpose is specified.
+### Quietline Messenger — encrypted messaging
 
-## 10. Shared integration contract
+Quietline owns its own messaging client, identity and device model, encryption state, homeserver configuration, storage, user experience and release lifecycle. It must operate independently and must not require Cipher or another Vectolith product. Its current scaffold substantially overlaps Cipher; a distinct product specification is still needed, but that does not authorize a shared runtime or a forced consolidation.
 
-Cross-product integrations must define, at minimum:
-- Stable versioned request and response schemas.
-- Authenticated service identity and least-privilege scopes.
-- User/workspace/tenant context with explicit isolation boundaries.
-- Idempotency keys and bounded retry semantics for actions.
-- Correlation IDs and traceable source revisions.
-- Structured action states: proposed, authorized, attempted, accepted, completed, failed or unknown.
-- Evidence receipts from the system that performed the action.
-- Timeout, cancellation, partial-failure and recovery behaviour.
-- Data minimization, retention and deletion expectations.
+### AERYN — autonomous intelligence and research
 
-A product may consume another Vectolith product's capabilities only through an explicit contract. Shared ownership does not imply shared databases, credentials, deployment environments or unrestricted access.
+AERYN owns its own product requirements, research workflow, source retrieval, provenance, synthesis, data handling, runtime, evaluation and release lifecycle. Its detailed specification and implementation remain to be established. It must not depend on Velnor or Models by Vectolith.
+
+## 5. Repository classification
+
+Not every repository is a released product. Company governance repositories, internal demos, templates and placeholders must be classified honestly. Their existence does not create product dependencies:
+- `vectolith` is the company identity and governance repository, not a runtime dependency.
+- `demo-repository` is an internal GitHub demonstration/template.
+- `my-project` is an unclassified placeholder until its purpose is specified.
+
+## 6. Verification requirements
+
+Each product's independent release checklist must verify:
+
+- A clean checkout can install/build/test without checking out another Vectolith repository.
+- Runtime startup does not require another Vectolith service, token, database, account or endpoint.
+- Authentication and authorization work using product-owned mechanisms.
+- Data access, persistence, backup and deletion are product-owned.
+- Required external services are listed with purpose, permissions, limits, failure modes and fallback.
+- Core workflows remain available when every optional Vectolith-to-Vectolith integration is disabled.
+- CI and release workflows run and complete independently.
+- Product documentation does not claim another Vectolith product is required.
+
+Record the exact commit, commands, environment, workflow URLs and outcomes. A documentation statement alone is not proof of independence.
+
+## 7. Governance
+
+The portfolio register is an inventory and status record, not an architecture that binds products together. The company may share policy, brand assets and non-runtime documentation templates. Each product team remains responsible for implementing and proving the controls in its own repository.
