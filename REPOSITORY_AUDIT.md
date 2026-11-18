@@ -7,7 +7,7 @@
 
 ## Executive result
 
-The public-product standard is merged into company governance and eight product repositories. A fresh account-wide GitHub search on 2026-11-18 returned **28 open pull requests** across the 12 repositories after duplicate tracks were consolidated and readiness work was merged. Several repositories still have overlapping or stacked implementation tracks; this is not a one-PR-per-repository programme. Repository visibility settings were not changed.
+The public-product standard is merged into company governance and eight product repositories. A fresh account-wide GitHub search on 2026-11-18 returned **20 open pull requests** across the 12 repositories after duplicate tracks were consolidated and readiness work was merged. Several repositories still have overlapping or stacked implementation tracks; this is not a one-PR-per-repository programme. Repository visibility settings were not changed.
 
 The audit found multiple real engineering and release blockers. Several have been corrected and verified through GitHub Actions. No repository has a published GitHub release. Cloudflare account inspection found two Workers (`olli` and `velnor-github-ruleset-manager`) and zero Pages projects; neither Worker is verified as a product runtime. Deployments hosted elsewhere were not verified. No product is being represented as production-ready solely because its documentation or CI passes.
 
@@ -17,28 +17,34 @@ The audit found multiple real engineering and release blockers. Several have bee
 
 | Repository | Open PRs |
 |---|---:|
-| Velnor | 14 |
+| Velnor | 9 |
+| Blud | 3 |
 | Models by vectolith | 5 |
-| VaultETH | 1 |
-| NYR | 3 |
-| Blud | 2 |
 | demo-repository | 2 |
 | my-project | 1 |
-| **Total** | **28** |
+| **Total** | **20** |
 
 ### Verified changes and current release gates
 
 - **Company governance:** PR #1 merged. This audit is maintained on the default branch.
 - **Cipher Messenger and Quietline Messenger:** readiness PR #2 merged in each repository. Their standalone boundaries, fail-closed E2EE send policy, HTTPS homeserver validation, regression tests and CI are on the default branches. Neither has a verified managed public homeserver or public launch.
-- **VaultETH:** readiness PR #75 merged. Security PR #74 is still draft but is now mergeable; its exact current head passed both Android and iOS CI (runs 44363814522 and 44363814591). Android recovery-phrase reads, legacy cross-chain address derivation and native signing require fresh strong-biometric-bound Keystore proof in the reviewed source paths. Physical-device security testing, independent review, store identity/URLs, signing and release approval remain outstanding. No real-fund or store-release approval is claimed.
+- **VaultETH:** readiness PR #75 and Android wallet-security PR #74 are merged. PR #74's exact head passed Android and iOS CI (44365511456 and 44365511605); main-branch Android/iOS CI is still running after merge (44368572674 and 44368572682). Android recovery-phrase reads, legacy cross-chain address derivation and native signing now require fresh strong-biometric-bound Keystore proof in the reviewed source paths. Physical-device security testing, independent review, store identity/URLs, signing and release approval remain outstanding. No real-fund or store-release approval is claimed.
 - **Models by vectolith:** readiness PR #78 merged. PRs #73, #75, #76 and #79 remain active tracks. Current evidence includes passing Core Prime runtime/evaluation and Vectolith Runtime checks on #76, and passing runtime/evaluation checks on #79. Teacher qualification, legal/provenance review, independent human adjudication, protected holdout evidence and training authorization remain release gates.
 - **PLUCO Network:** readiness PR #4 and separately versioned V2 successor PR #10 merged. Main-branch contract verification run 44364688447 passed **91 Foundry tests**, verifier syntax checks and public Base RPC checks. The verifier confirmed all eight manifest transactions, three deployed V1 executable runtimes against Foundry artifacts, ownership/treasury/fee/supply/mint-price/registry/royalty state. V2 remains source-only and undeployed. V1 has documented immutable-contract limitations; independent specialist review and explorer source verification remain outstanding.
-- **Blud:** standalone-boundary PR #6 merged. Main-branch CI run 44364193704 passed. The fake browser-worker endpoint and Velnor bridge were removed; Blud no longer requires Velnor for its core operation. PRs #3 and #7 were closed as rejected/superseded tracks. Remaining PRs #1 and #2 need separate security, account-lifecycle and functionality review.
-- **Velnor:** standalone-boundary PR #37 merged. Main-branch production CI run 44364105920 passed. The Blud bridge PR #33 was closed; Velnor no longer requires Blud for core operation. Fourteen open PRs remain, including stacked messaging, storage, provider and delivery tracks; #29/#30 and other dependency chains still require conflict/dependency review before merge.
+- **Blud:** standalone-boundary PR #6 merged; main CI 44364193704 passed. The fake browser-worker endpoint and Velnor bridge were removed; Blud no longer requires Velnor for core operation. PR #8 adds proxy/session security, dashboard regression coverage and CI repairs; its only initial failure was formatting in `tests/proxy.test.ts`, which was corrected with the repository formatter, and the current CI rerun is pending. Draft PRs #1 and #2 remain stacked on an unmerged architecture branch and require separate security, account-lifecycle and functionality review. PRs #3 and #7 were closed as rejected/superseded tracks.
+- **Velnor:** standalone-boundary PR #37 and platform-architecture PR #38 merged; main production CI 44364105920 and 44368632255 passed. The Blud bridge PR #33, synthetic-curriculum PR #23 and unused GitHub-webhook-helper PR #34 were closed. PR #39 is a mainline replacement for the older reminder-claim PR #26; CI on the final documentation-adjusted head is running. The messaging stack (#27–#32) remains blocked by dependency ordering and test failures: #28 has a stale-delivery regression, #31's SMS-downgrade duplicate-risk fix is under re-test, and #32 has new atomic duplicate-send guards under re-test. PR #35 remains a draft partial async-storage migration. PR #25's explicit-provider policy branch was closed by the repository owner before merge; the main runtime still needs a fix so an explicitly selected but unconfigured provider does not silently fall through to the built-in orchestrator.
 - **AERYN:** standalone and contract-verification PR #5 merged. Main contract CI run 44364331741 passed. It remains an owner-minted ERC-721 source project; no live deployment, public mint or independent contract audit is claimed.
-- **NYR:** PR #5 remains draft despite passing host memory, clean/incremental build, ELF/ISO and QEMU validation. PRs #3/#4 are dependency update tracks; #7 is the standalone product documentation track. OS release and broad hardware compatibility are not claimed.
+- **NYR:** hardening PR #5 merged after passing host memory, clean/incremental build, ELF/ISO and QEMU validation. Standalone documentation PR #7 was closed unmerged by the repository owner. OS release and broad hardware compatibility are not claimed.
 - **demo-repository:** the HTML proof workflow passed. The issue auto-assignment correction still needs a real issue-open event test. It remains an internal demonstration, not a Vectolith public product.
 - **my-project:** no product build or deployable application is declared. It remains an unclassified placeholder and must not be counted as a viable public product.
+
+### Current dependency and failure details
+
+- Velnor reminder dispatch: PR #39 is the clean mainline implementation. It claims reminders in a SQLite `BEGIN IMMEDIATE` transaction, uses a bounded lease and marks claims terminal only after state persistence. It prevents overlapping workers, but a process crash after an external provider accepts a send and before state persistence can still cause at-least-once duplicate delivery. Do not claim exactly-once external delivery until provider idempotency/outbox tracking is integrated.
+- Velnor messaging: PR #30's durable outbound attempt ledger is a prerequisite for the provider-specific delivery tracks. PR #31 and #32 currently modify overlapping delivery code from different base branches; consolidate their changes before merging either. Automatic retries must not resend while an attempt is pending, queued, processing or delivered. Ambiguous outcomes require explicit, provider-reconciled retry authorization.
+- Velnor provider selection: explicit provider selection must be preserved. If a selected provider lacks credentials, return a configuration error; do not silently substitute another provider or the built-in orchestrator. The attempted fix in PR #25 was closed before merge, so this remains an open implementation gap.
+- Blud: PR #8 is the active quality/security candidate; its exact-head CI result must be green before merge. PRs #1 and #2 are stacked on an unmerged architecture branch and must not be merged independently of that base.
+- Models by vectolith: do not treat passing runtime/evaluation CI as teacher qualification or training authorization. Candidate responses and evaluation evidence must remain immutable, rights-cleared and independently adjudicated.
 
 ### Dependency and architecture decisions
 
