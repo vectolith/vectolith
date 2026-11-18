@@ -2,12 +2,12 @@
 
 **Audit date:** 2026-11-18  
 **Scope:** All 12 repositories accessible under the `vectolith` GitHub account.  
-**Audit branch:** `docs/company-wide-portfolio-governance`  
+**Audit branch:** `main` (consolidated from `docs/company-wide-portfolio-governance`)  
 **Purpose:** Evidence-based implementation and release-readiness review. This report is a point-in-time record, not a certification.
 
 ## Executive result
 
-The shared public-product standard has been proposed across the 12 repositories through repository-specific branches and pull requests. A fresh account-wide GitHub search at 2026-11-18 18:20 +01:00 returned **52 open pull requests** across the 12 repositories after eight duplicate product-identity, standalone-boundary, E2EE and company-portfolio PRs were consolidated and closed; several repositories have multiple overlapping or stacked PRs, so this is not a one-PR-per-repository programme. Repository visibility settings were not changed.
+The shared public-product standard has been proposed across the 12 repositories through repository-specific branches and pull requests. A fresh account-wide GitHub search at 2026-11-18 18:20 +01:00 returned **51 open pull requests** across the 12 repositories after eight duplicate product-identity, standalone-boundary, E2EE and company-portfolio PRs were consolidated and closed and company governance PR #1 was merged; several repositories have multiple overlapping or stacked PRs, so this is not a one-PR-per-repository programme. Repository visibility settings were not changed.
 
 The audit found multiple real engineering and release blockers. Several have been corrected and verified through GitHub Actions. No repository has a published GitHub release. Cloudflare account inspection found no Pages projects and no Velnor-specific Worker; deployments hosted elsewhere were not verified. No product is being represented as production-ready solely because its documentation or CI passes.
 
@@ -47,7 +47,7 @@ The standard and repository-specific changes are proposed through these open pul
 - [AERYN #2](https://github.com/vectolith/AERYN/pull/2)
 - [demo-repository #3](https://github.com/vectolith/demo-repository/pull/3)
 - [pluco-network #4](https://github.com/vectolith/pluco-network/pull/4)
-- [vectolith #1](https://github.com/vectolith/vectolith/pull/1)
+- Company governance and public-product standards: [vectolith #1 — merged](https://github.com/vectolith/vectolith/pull/1)
 - [blud #7](https://github.com/vectolith/blud/pull/7)
 - [velnor #36](https://github.com/vectolith/velnor/pull/36)
 - [NYR #6](https://github.com/vectolith/NYR/pull/6)
@@ -72,7 +72,7 @@ These are separate, active implementation tracks that must be reviewed alongside
 
 ### Pull-request inventory
 
-The current global search returns **52 open PRs** after consolidating eight duplicate identity, standalone-boundary, E2EE and company-portfolio PRs:
+The current global search returns **51 open PRs** after consolidating eight duplicate identity, standalone-boundary, E2EE and company-portfolio PRs and merging the company governance PR:
 
 | Repository | Open PRs |
 |---|---:|
@@ -85,10 +85,10 @@ The current global search returns **52 open PRs** after consolidating eight dupl
 | AERYN | 4 |
 | Cipher Messenger | 1 |
 | Quietline Messenger | 1 |
-| Vectolith company repository | 1 |
+| Vectolith company repository | 0 |
 | demo-repository | 2 |
 | my-project | 1 |
-| **Total** | **52** |
+| **Total** | **51** |
 
 ### Current CI evidence and blockers
 
@@ -106,7 +106,7 @@ The current global search returns **52 open PRs** after consolidating eight dupl
 
 ### Merge and dependency observations
 
-- All 60 open PRs were initially enumerated and metadata-inspected; eight duplicate identity, standalone-boundary, E2EE and company-portfolio PRs were subsequently consolidated and closed, leaving 52 open. PR metadata was inspected for base branch, head branch, head SHA, draft state, GitHub mergeability, update time and changed-file count.
+- All 60 open PRs were initially enumerated and metadata-inspected; eight duplicate identity, standalone-boundary, E2EE and company-portfolio PRs were consolidated and closed, and company governance PR #1 was merged, leaving 51 open. PR metadata was inspected for base branch, head branch, head SHA, draft state, GitHub mergeability, update time and changed-file count.
 - GitHub's mergeable=true is only a conflict signal; it is not approval, passing CI, semantic compatibility or release readiness.
 - Blud #7 is stacked on #3, while #6 proposes removing the bridge. Velnor #33 depends on #3, while #37 removes the dependency. Treat these as conflicting architectural tracks, not independently mergeable changes.
 - Velnor #27, #28, #30, #31 and #32 form a stacked delivery chain; #29 and #30 currently report merge conflicts. PRs #23 and #21 also report merge conflicts and need rebase/review before acceptance.
@@ -125,4 +125,4 @@ The current global search returns **52 open PRs** after consolidating eight dupl
 8. Maintain immutable model/data provenance and human evaluation evidence before any Models by Vectolith model release.
 9. Require passing CI, a reviewed release checklist, and a tested rollback path for every future public release.
 
-**Status:** Company governance, public-product standard and repository audit are consolidated on one company PR branch. Product-specific remediation remains in its own repositories and pull requests. Repository-wide production readiness is not yet achieved or certified.
+**Status:** Company governance, public-product standard, repository audit and product-boundary policy are merged into the Vectolith company repository's main branch. Product-specific remediation remains in its own repositories and pull requests. Repository-wide production readiness is not yet achieved or certified.
