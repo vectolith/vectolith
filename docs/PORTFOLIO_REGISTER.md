@@ -37,7 +37,7 @@ See the [Vectolith product-boundary baseline](PRODUCT_BOUNDARIES.md) for explici
 
 ### Company layer
 
-Vectolith owns all products, repositories, intellectual property and shared company standards in this portfolio. The company layer maintains identity, security principles, engineering governance, portfolio classification and cross-product standards.
+All products in this portfolio are Vectolith products. The company layer maintains identity, security principles, engineering governance, portfolio classification and cross-product standards. Product ownership does not override applicable third-party licenses, contributor rights or copyright notices.
 
 ### Model layer
 
@@ -80,7 +80,7 @@ Do not use "Active" as a substitute for maturity. Record lifecycle stage and rel
 1. **Portfolio source of truth:** keep the company README synchronized with this detailed register; the register is authoritative when the summary and repository-level documentation differ.
 2. **Blud/Velnor integration:** Velnor has an RPC bridge, but Blud's current endpoint fabricates success without browser execution. Paired fail-closed fixes are proposed in Blud PR #3 and Velnor PR #33; the real browser-agent adapter remains unimplemented.
 3. **PLUCO deployment evidence:** the configured Base addresses remain unverified. The documentation correction is proposed in PLUCO PR #3; independent chain verification and contract CI remain outstanding.
-4. **VaultETH company attribution:** the repository README and proprietary license metadata must consistently identify Vectolith as the product owner and rights holder.
+4. **VaultETH company attribution:** identify Vectolith as product owner while preserving accurate copyright authorship and existing proprietary license terms; do not change a copyright holder without a documented rights assignment.
 5. **Cipher/Quietline differentiation:** their Phase 0 READMEs are nearly identical except for the local server name. Retain both products and define distinct user problems, threat models and product requirements before building separate clients.
 6. **AERYN specification gap:** an initial product-charter PR is open; approve a detailed PRD and threat model before implementation or capability claims.
 7. **External dependency transparency:** record required services, operational limits, external providers and failure modes per product.
