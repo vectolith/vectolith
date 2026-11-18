@@ -3,7 +3,7 @@
 **Applies to:** Vectolith's product and research portfolio  
 **Status:** Portfolio architecture baseline; implementation claims are explicitly separated from intended boundaries.
 
-Vectolith owns the products and repositories in its portfolio. Each product keeps its own identity, roadmap, architecture, release lifecycle and acceptance criteria. Shared Vectolith standards govern security, privacy, provenance, interoperability and release evidence.
+All products in this portfolio are Vectolith products. Each product keeps its own identity, roadmap, architecture, release lifecycle and acceptance criteria. Shared Vectolith standards govern security, privacy, provenance, interoperability and release evidence. Product ownership does not override applicable third-party licenses, contributor rights or copyright notices.
 
 This document defines product responsibilities to reduce accidental duplication. A proposed interface or responsibility is not evidence that an integration has already been implemented.
 
@@ -89,7 +89,7 @@ NYR is Vectolith's independent x86-64 kernel research project. It owns its kerne
 
 ## 9. Repository classification
 
-Not every repository is a customer-facing product. Company repositories, internal demos, templates and placeholders remain Vectolith-owned assets but must be classified honestly:
+Not every repository is a customer-facing product. Company repositories, internal demos, templates and placeholders are Vectolith-managed portfolio assets and must be classified honestly; third-party licenses and contributor rights remain in force:
 - `vectolith` is the company and governance repository.
 - `demo-repository` is currently documented as an internal demonstration/template, not a released product.
 - `my-project` is currently an unclassified placeholder; no product capabilities should be inferred until its purpose is specified.
