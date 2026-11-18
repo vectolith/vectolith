@@ -4,33 +4,47 @@
 
 # V E C T O L I T H
 
-**Autonomous Personal AI Systems · Latent Vector Intelligence · Self-Custodial Cryptography**
+**Autonomous Intelligence · Applied Systems Engineering · Digital Ownership**
 
-[PLUCO Network](https://github.com/vectolith/pluco-network) · [Velnor](https://github.com/vectolith/velnor) · [Blud](https://github.com/vectolith/blud)
+[Portfolio Register](docs/PORTFOLIO_REGISTER.md) · [Engineering Governance](docs/ENGINEERING_GOVERNANCE.md) · [Security Policy](SECURITY.md)
 
 </div>
 
 ---
 
-### Architecture & Flagship Systems
+## Company
 
-**Vectolith** (*VEK-to-lith* — **Vector** + **Monolith**) engineers high-assurance, zero-telemetry software across autonomous personal intelligence, latent vector retrieval, self-custodial cryptography, and digital provenance.
+**Vectolith** (*VEK-to-lith* — **Vector** + **Monolith**) is a technology company developing independent products and research systems across AI platforms, model development, autonomous execution, digital ownership, cryptographic software and systems engineering.
 
-| System | Architecture | Surface | Status |
-| :--- | :--- | :--- | :--- |
-| **[Velnor](https://github.com/vectolith/velnor)** | 1.5B Quantitative Reasoning & Software Architecture Engine (`Qwen2.5-Coder-1.5B-Instruct` + `velnor-coder-v2`) + multi-provider AI router for first-principles math, code synthesis, document RAG, and workspace triage | Headless Messaging (`iMessage`, `SMS`, `Siri`, `Slack`) | `Active` |
-| **[Blud](https://github.com/vectolith/blud)** | Autonomous coordinator & isolated cloud browser worker (`Kernel`) with client-encrypted secret vault autofill | Headless Messaging (`Linq iMessage`) | `Active` |
-| **[PLUCO Network](https://github.com/vectolith/pluco-network)** | Curated digital ownership network and editorial provenance surface built on Next.js 16 & React 19 | Web / Static Export | `Active` |
-| **VaultETH** | Executive, self-custodial multi-chain cryptographic vault — zero accounts, zero cloud dependency, zero telemetry | Native Mobile (`iOS`, `Android`) | `Private` |
-| **AERYN** | Autonomous intelligence & deep research synthesis engine | Internal Runtime | `Private` |
+Products retain independent architectures, technical roadmaps and release lifecycles. Shared company standards govern security, privacy, provenance, interoperability, documentation and release evidence.
 
----
+## Portfolio
 
-### Core Engineering Principles
+| Project | Role | Current documented position |
+|---|---|---|
+| [Velnor](https://github.com/vectolith/velnor) | General-purpose AI agent platform, integrations and execution runtime | Active development; production deployment and live-provider evidence must be assessed per release |
+| [Blud](https://github.com/vectolith/blud) | Personal agent and browser-execution product | Active development; its README currently states it is not intended for production use and documents a Vercel Pro requirement |
+| [Models by Vectolith](https://github.com/vectolith/Models-by-vectolith.) | Model family, foundation selection, training, evaluation and releases | Research and infrastructure stage; no foundation selected and no student training/release claimed |
+| [PLUCO Network](https://github.com/vectolith/pluco-network) | Base digital-ownership protocol and marketplace | Contract deployment claims require reconciliation; Foundry tests are documented but not yet in CI |
+| [VaultETH](https://github.com/vectolith/VaultETH) | Native self-custodial wallet for iOS and Android | Native implementation with explicit real-money release gates; web surface is a demo sandbox |
+| [NYR](https://github.com/vectolith/NYR) | From-scratch x86-64 operating-system kernel research | Early-kernel milestone; not a complete general-purpose OS |
+| [Cipher Messenger](https://github.com/vectolith/Cipher-messenger) | Encrypted messaging initiative | Phase 0 local Matrix/Synapse E2EE validation |
+| [Quietline Messenger](https://github.com/vectolith/quietline-messenger) | Encrypted messaging initiative | Phase 0 local Matrix/Synapse E2EE validation; product differentiation from Cipher is unresolved |
+| AERYN (private) | Autonomous intelligence and research initiative | Specification and implementation status require definition |
+| demo-repository (private) | GitHub demonstration/template | Internal demo, not a product |
+| my-project | Unclassified repository | Placeholder; purpose requires classification |
 
-1. **Zero-UI Native Messaging Execution** — Personal AI agents (**Velnor** and **Blud**) operate directly inside native messaging threads (`iMessage`, `SMS`, `Siri`, `Slack`) without bloated web dashboards or wrapper apps.
-2. **Cryptographic Isolation & Privacy** — Credentials, keys, and vault secrets are encrypted before persistence and injected out-of-band without entering model context.
-3. **Deterministic Verification** — Every repository enforces strict static analysis, automated test suites, and reproducible builds.
+Repository visibility and maturity are separate: private does not mean production-ready, and public does not mean released. The [canonical portfolio register](docs/PORTFOLIO_REGISTER.md) records the full repository inventory, product boundaries, evidence and outstanding gates.
+
+## Shared engineering principles
+
+1. **Security and privacy by design** — credentials, keys, user data and tenant boundaries are protected at trusted system boundaries.
+2. **Trusted execution** — models may reason and propose actions; runtime code enforces authorization, validates tools and determines whether an action actually completed.
+3. **Evidence-backed delivery** — builds, tests, deployments, model evaluations and releases must be tied to identifiable source revisions and reproducible evidence.
+4. **Independent product lifecycles** — products may use different architectures and infrastructure while adhering to shared company contracts.
+5. **Honest capability reporting** — prototypes, simulations, disabled features and unverified integrations must be identified as such.
+
+See the [company-wide engineering and release governance](docs/ENGINEERING_GOVERNANCE.md) and [security policy](SECURITY.md).
 
 ---
 
