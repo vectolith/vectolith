@@ -32,7 +32,7 @@ The company may establish consistent security, privacy, legal, documentation and
 | [NYR](https://github.com/vectolith/NYR) | Independent from-scratch x86-64 operating-system project | Early-kernel milestone; not a complete general-purpose OS |
 | [Cipher Messenger](https://github.com/vectolith/Cipher-messenger) | Standalone encrypted messaging product initiative | Independent Matrix client with fail-closed E2EE sends and HTTPS homeserver validation; no managed public homeserver or release is verified |
 | [Quietline Messenger](https://github.com/vectolith/quietline-messenger) | Standalone encrypted messaging product initiative | Early Matrix/Synapse E2EE validation; not a released messaging product |
-| [AERYN](https://github.com/vectolith/AERYN) (private source) | Independent on-chain generative-art/ERC-721 collection | Solidity source defines a 100-token owner-minted collection with on-chain SVG metadata; no live Base deployment is claimed |
+| [AERYN](https://github.com/vectolith/AERYN) (private source; public collection development) | Independent on-chain generative-art/ERC-721 collection | Solidity source defines a 100-token owner-minted collection with on-chain SVG metadata; no live Base deployment is claimed |
 
 Repository visibility and maturity are separate: private source does not mean a private product, and public source does not mean a released product. The [portfolio register](docs/PORTFOLIO_REGISTER.md) records repository classification, product-specific evidence and outstanding gates.
 
