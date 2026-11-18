@@ -33,7 +33,7 @@ This register is the company portfolio index for Vectolith-owned products and in
 
 ## Product boundaries and relationships
 
-The following boundaries are the intended portfolio model. They are architectural direction, not a claim that every integration is implemented.
+See the [Vectolith product-boundary baseline](PRODUCT_BOUNDARIES.md) for explicit ownership, responsibilities and integration contracts. The boundaries are architectural direction, not a claim that every integration is implemented.
 
 ### Company layer
 
@@ -80,7 +80,7 @@ Do not use "Active" as a substitute for maturity. Record lifecycle stage and rel
 1. **Portfolio source of truth:** keep the company README synchronized with this detailed register; the register is authoritative when the summary and repository-level documentation differ.
 2. **Blud/Velnor overlap:** define which product owns messaging orchestration, browser execution, memory, scheduling, and integration contracts.
 3. **PLUCO deployment contradiction:** reconcile the listed Base deployment addresses against the statement that no contracts are deployed. Require chain ID, transaction hashes, deployer/owner, verified source, bytecode match, and deployment commit.
-4. **VaultETH company attribution:** repository copyright and license metadata identify `pluco.dev`. Align repository attribution and licensing metadata with Vectolith ownership, preserving the existing proprietary rights and avoiding any unintended license grant.
+4. **VaultETH company attribution:** the repository README and proprietary license metadata must consistently identify Vectolith as the product owner and rights holder.
 5. **Cipher/Quietline duplication:** establish whether the products have distinct threat models, user groups, protocols or product requirements.
 6. **AERYN specification gap:** do not represent it as an implemented autonomous research engine until evidence exists.
 7. **External dependency transparency:** record required services, operational limits, external providers and failure modes per product.
