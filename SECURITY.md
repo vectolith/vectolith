@@ -4,39 +4,24 @@ Vectolith develops software and research systems across autonomous AI, model inf
 
 This policy is a standard, not a certification that every repository has implemented or independently verified every control. Product-specific threat models and release gates remain mandatory.
 
-## Scope and repository coverage
+## Scope
 
-The policy applies to all repositories owned or operated by Vectolith. The following register distinguishes maintained products from research and unclassified repositories; it does not imply that every project is production-supported.
+This policy applies to all Vectolith-owned and Vectolith-operated products and repositories. Private repository locations and internal implementation details are intentionally not enumerated in this public policy. Every product must maintain its own threat model, security contact route, supported-version policy and release gates.
 
-| Repository | Scope | Current classification | Security posture |
-|---|---|---|---|
-| `vectolith/vectolith` | Company identity, portfolio and shared governance | Company foundation | Organization policy and portfolio register |
-| `vectolith/velnor` | AI agent platform, messaging and execution runtime | Active development; production deployment documented | Product security and operations documentation exist; ongoing verification required |
-| `vectolith/blud` | Personal agent and browser automation | Active development; README says not intended for production use | Product security controls documented; no production readiness claim |
-| `vectolith/Models-by-vectolith.` | Model training, evaluation, artifacts and releases | Research/infrastructure | Training rights, data provenance, model qualification and release gates remain mandatory |
-| `vectolith/pluco-network` | Base smart contracts and marketplace | Active development; deployment documentation contains a contradiction | Deployment evidence and contract CI require reconciliation |
-| `vectolith/VaultETH` | Native self-custodial wallet clients | Active development; real-money release gated | Threat model and security policy exist; independent audit and release gates remain outstanding |
-| `vectolith/NYR` | x86-64 kernel research | Research | Kernel-specific memory, privilege and interrupt safety review required |
-| `vectolith/Cipher-messenger` | Matrix-based encrypted messaging | Phase 0 research | Local E2EE validation only; not a released messaging product |
-| `vectolith/quietline-messenger` | Matrix-based encrypted messaging | Phase 0 research | Local E2EE validation only; scope overlap with Cipher unresolved |
-| `vectolith/AERYN` | On-chain generative-art ERC-721 collection | Active contract development; no production deployment claimed | Owner-minted collection and Foundry test/CI work exist; deployment, owner-key custody and public mint gates remain |
-| `vectolith/demo-repository` | GitHub demonstration | Internal demo | Not a supported product |
-| `vectolith/my-project` | Unclassified placeholder | Unclassified | No product support claim |
-
-Maintained products and active research repositories must accept vulnerability reports even when they are not production releases. The absence of a repository from a production support list does not make security reporting optional.
+Maintained products and active research systems must accept vulnerability reports even when they are not production releases. The absence of a public release does not make security reporting optional.
 
 ## Reporting a vulnerability
 
 **Do not report security vulnerabilities through public GitHub issues.**
 
 1. **Private GitHub Security Advisory (preferred):** use the Security tab of the affected repository and select **Report a vulnerability**, where private vulnerability reporting is enabled.
-2. **Direct security contact:** email `security@vectolith.com`.
+2. **Direct security contact:** use the security contact published in the affected product's repository or official product website.
 
 Do not include live secrets, recovery phrases, private keys or unnecessary personal data in a report. Use a safe reproduction and redact sensitive values.
 
 ### What to include
 
-- Affected repository, branch, commit and version.
+- Affected product, repository, branch, commit and version.
 - Description, impact and suspected severity.
 - Reproduction steps or a proof of concept that does not harm users or systems.
 - Affected deployment or environment, if known.
@@ -80,6 +65,6 @@ Every maintained product must implement and test controls appropriate to its thr
 
 ## Governance and exceptions
 
-The [company-wide engineering governance](docs/ENGINEERING_GOVERNANCE.md) defines lifecycle and release gates. The [portfolio register](docs/PORTFOLIO_REGISTER.md) identifies current repository classifications and known gaps.
+The [company-wide engineering governance](docs/ENGINEERING_GOVERNANCE.md) defines lifecycle and release gates. The [portfolio register](docs/PORTFOLIO_REGISTER.md) identifies product classifications and known release gaps without listing private repository locations.
 
 Security exceptions must identify the requirement, reason, affected product/version, risk, compensating control, accountable owner, expiry/review date and approval record. A documentation exception does not waive a critical security or legal release gate.
