@@ -4,16 +4,15 @@
 **Owner:** Vectolith  
 **Purpose:** Canonical index of Vectolith repositories, product boundaries, evidence-backed maturity, and cross-project dependencies.
 
-This register is a snapshot of repository documentation, not a certification of production operation, legal ownership, security, or commercial readiness. A repository's presence in this register does not imply that its product is released.
+This register is the company portfolio index for Vectolith-owned products and initiatives. It is a snapshot of repository documentation, not a certification of production operation, security, or commercial readiness. A repository's presence in this register does not imply that its product is released.
 
 ## Portfolio principles
 
-- Each product owns its implementation, roadmap, release lifecycle, and technical acceptance criteria.
+- Vectolith owns the portfolio and its products. Each product retains its own implementation, roadmap, release lifecycle, and technical acceptance criteria.
 - Shared Vectolith standards govern identity, security, privacy, provenance, interoperability, documentation, and release evidence.
 - Product maturity is recorded separately from strategic importance.
 - Demonstrations, unit tests, CI success, deployment configuration, and verified live operation are different evidence types.
 - Do not describe a capability as live unless a reproducible test or deployment record establishes it.
-- Budget constraints are project-specific. The zero-budget constraint for Models by Vectolith is mandatory and must not be silently relaxed.
 
 ## Product and project register
 
@@ -21,10 +20,10 @@ This register is a snapshot of repository documentation, not a certification of 
 |---|---|---|---|---|
 | [vectolith](https://github.com/vectolith/vectolith) | Public | Company identity, portfolio index, shared governance | Central README now provides a portfolio overview; this register remains the detailed canonical inventory | Maintain this register and company-wide standards as the source of truth |
 | [velnor](https://github.com/vectolith/velnor) | Public | General-purpose AI agent platform and integration/runtime layer | Messaging and API surfaces, provider routing, tenant state, operational documentation and automated checks are documented; OCI is identified as current production deployment of record | Verify live provider delivery, operational observability, retention, global rate limits and release consolidation |
-| [blud](https://github.com/vectolith/blud) | Public | Personal agent and browser-execution product | Browser automation, credential vault and integrations are documented; README explicitly says the software is not intended for production use and requires Vercel Pro for its scheduled-work model | Resolve production status, operating-cost model and relationship to Velnor |
+| [blud](https://github.com/vectolith/blud) | Public | Personal agent and browser-execution product | Browser automation, credential vault and integrations are documented; README explicitly says the software is not intended for production use and requires Vercel Pro for its scheduled-work model | Resolve production status, scheduled-work dependencies and relationship to Velnor |
 | [Models-by-vectolith.](https://github.com/vectolith/Models-by-vectolith.) | Public | Model family, foundation selection, training, evaluation, registry and releases | Extensible family architecture and evaluation/training infrastructure are documented; no foundation is selected and no student training/release is claimed | Complete legal, teacher, data, human-evaluation and foundation gates before training |
 | [pluco-network](https://github.com/vectolith/pluco-network) | Public | Base digital-ownership protocol and marketplace | README lists mainnet contract addresses and deployment date, but later contradicts itself by saying no contracts are deployed; 65 Foundry tests are documented but not in CI | Reconcile deployment evidence and run Foundry tests in CI |
-| [VaultETH](https://github.com/vectolith/VaultETH) | Private | Native self-custodial wallet for iOS and Android | Native clients and CI are documented; real-money limitations are explicit; web surface is a disposable sandbox; ERC-20 sending is disabled and valuations are demo data | Independent wallet security review, recovery/signing verification, release and ownership/IP gates |
+| [VaultETH](https://github.com/vectolith/VaultETH) | Private | Native self-custodial wallet for iOS and Android | Native clients and CI are documented; real-money limitations are explicit; web surface is a disposable sandbox; ERC-20 sending is disabled and valuations are demo data | Independent wallet security review, recovery/signing verification and release gates |
 | [NYR](https://github.com/vectolith/NYR) | Public | From-scratch x86-64 operating-system kernel research | Reproducible toolchain, boot validation, memory management and early SMP/APIC work are documented; README explicitly says this is not a complete general-purpose OS | Continue gated kernel milestones; do not overstate OS completeness |
 | [Cipher-messenger](https://github.com/vectolith/Cipher-messenger) | Private | Encrypted messaging research/product candidate | Phase 0 local Matrix/Synapse E2EE validation plan; no custom client is claimed | Prove E2EE and decide product differentiation before client development |
 | [quietline-messenger](https://github.com/vectolith/quietline-messenger) | Private | Encrypted messaging research/product candidate | Phase 0 local Matrix/Synapse E2EE validation plan; substantially overlaps Cipher's documented scope | Decide whether it is a distinct product or consolidate the duplicate foundation |
@@ -38,7 +37,7 @@ The following boundaries are the intended portfolio model. They are architectura
 
 ### Company layer
 
-The Vectolith organization owns shared company identity, security principles, engineering governance, portfolio classification, and cross-product standards.
+Vectolith owns all products, repositories, intellectual property and shared company standards in this portfolio. The company layer maintains identity, security principles, engineering governance, portfolio classification and cross-product standards.
 
 ### Model layer
 
@@ -81,10 +80,10 @@ Do not use "Active" as a substitute for maturity. Record lifecycle stage and rel
 1. **Portfolio source of truth:** keep the company README synchronized with this detailed register; the register is authoritative when the summary and repository-level documentation differ.
 2. **Blud/Velnor overlap:** define which product owns messaging orchestration, browser execution, memory, scheduling, and integration contracts.
 3. **PLUCO deployment contradiction:** reconcile the listed Base deployment addresses against the statement that no contracts are deployed. Require chain ID, transaction hashes, deployer/owner, verified source, bytecode match, and deployment commit.
-4. **VaultETH ownership:** repository copyright identifies `pluco.dev`, while it is presented as a Vectolith product. Record the legal owner, license authority and any assignment or licence.
+4. **VaultETH company attribution:** repository copyright and license metadata identify `pluco.dev`. Align repository attribution and licensing metadata with Vectolith ownership, preserving the existing proprietary rights and avoiding any unintended license grant.
 5. **Cipher/Quietline duplication:** establish whether the products have distinct threat models, user groups, protocols or product requirements.
 6. **AERYN specification gap:** do not represent it as an implemented autonomous research engine until evidence exists.
-7. **Cost and dependency transparency:** record required paid tiers, free-tier quotas, external providers and failure modes per product. The Models by Vectolith zero-budget constraint remains absolute for that project.
+7. **External dependency transparency:** record required services, operational limits, external providers and failure modes per product.
 
 ## Maintenance
 
