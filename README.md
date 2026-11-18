@@ -29,6 +29,8 @@ Our products are intended for real users. Product status, supported functionalit
 
 ## Repository governance
 
+See the current [repository engineering audit](REPOSITORY_AUDIT.md) for verified findings, remediation evidence, CI status, and release blockers.
+
 The [Public Product Readiness Standard](PUBLIC_PRODUCT_STANDARD.md) defines the shared baseline. Each repository must translate it into project-specific implementation, tests, release gates, and operational evidence. A checklist or README is not proof of compliance.
 
 Repository visibility is managed separately from product availability. Private source code can support a public product, provided the product's distribution, access, and operational model are intentionally designed and secured.
