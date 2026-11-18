@@ -30,7 +30,7 @@ Products retain independent architectures, technical roadmaps and release lifecy
 | [NYR](https://github.com/vectolith/NYR) | From-scratch x86-64 operating-system kernel research | Early-kernel milestone; not a complete general-purpose OS |
 | [Cipher Messenger](https://github.com/vectolith/Cipher-messenger) | Encrypted messaging initiative | Phase 0 local Matrix/Synapse E2EE validation |
 | [Quietline Messenger](https://github.com/vectolith/quietline-messenger) | Encrypted messaging initiative | Phase 0 local Matrix/Synapse E2EE validation; product differentiation from Cipher is unresolved |
-| AERYN (private) | Autonomous intelligence and research initiative | Specification and implementation status require definition |
+| [AERYN](https://github.com/vectolith/AERYN) (private) | Autonomous intelligence and deep-research synthesis initiative | Initial product charter drafted; detailed specification and implementation remain pending |
 | demo-repository (private) | GitHub demonstration/template | Internal demo, not a product |
 | my-project | Unclassified repository | Placeholder; purpose requires classification |
 
