@@ -7,7 +7,7 @@
 
 ## Executive result
 
-The shared public-product standard has been proposed across the 12 repositories through repository-specific branches and pull requests. A fresh account-wide GitHub search at 2026-11-18 18:20 +01:00 returned **60 open pull requests** across the 12 repositories; several repositories have multiple overlapping or stacked PRs, so this is not a one-PR-per-repository programme. Repository visibility settings were not changed.
+The shared public-product standard has been proposed across the 12 repositories through repository-specific branches and pull requests. A fresh account-wide GitHub search at 2026-11-18 18:20 +01:00 returned **58 open pull requests** across the 12 repositories after two duplicate E2EE PRs were consolidated and closed; several repositories have multiple overlapping or stacked PRs, so this is not a one-PR-per-repository programme. Repository visibility settings were not changed.
 
 The audit found multiple real engineering and release blockers. Several have been corrected and verified through GitHub Actions. No repository has a published GitHub release. Cloudflare account inspection found no Pages projects and no Velnor-specific Worker; deployments hosted elsewhere were not verified. No product is being represented as production-ready solely because its documentation or CI passes.
 
@@ -73,7 +73,7 @@ These are separate, active implementation tracks that must be reviewed alongside
 
 ### Pull-request inventory
 
-The current global search returns **60 open PRs**:
+The current global search returns **58 open PRs** after closing two duplicate E2EE implementation PRs:
 
 | Repository | Open PRs |
 |---|---:|
@@ -84,22 +84,22 @@ The current global search returns **60 open PRs**:
 | PLUCO Network | 4 |
 | NYR | 4 |
 | AERYN | 4 |
-| Cipher Messenger | 4 |
-| Quietline Messenger | 4 |
+| Cipher Messenger | 3 |
+| Quietline Messenger | 3 |
 | Vectolith company repository | 3 |
 | demo-repository | 2 |
 | my-project | 1 |
-| **Total** | **60** |
+| **Total** | **58** |
 
 ### Current CI evidence and blockers
 
 - **Models by vectolith:** PR #73 runtime/evaluation and Vectolith Runtime checks passed; PR #76 runtime/evaluation and Vectolith Runtime checks passed. Teacher qualification, legal rights, human adjudication, foundation selection, protected holdout and training authorization remain open gates. PR #79 requires its own final CI result.
-- **VaultETH:** PR #74 Android and iOS workflows passed on its exact head; PR #75 readiness-branch Android and iOS workflows also passed. No signed store release or real-fund approval is established.
+- **VaultETH:** PR #74 now enforces a fresh strong-biometric Keystore proof at the SecureVault mnemonic-read boundary, gates recovery-phrase viewing and legacy receive-address re-derivation, and removes automatic startup mnemonic reads. Android and iOS CI on the updated head are running (44360757869 and 44360757983); prior readiness-branch Android/iOS workflows passed. No signed store release or real-fund approval is established.
 - **PLUCO Network:** PR #6 frontend build and Foundry contract tests passed (91 tests); PR #7 standalone documentation build passed. V2 is a source proposal, not a deployment. V1 independent security review, source verification and migration/operations decisions remain open.
 - **Blud:** PR #3 and #7 currently fail formatting checks; PR #6 fails formatting on 13 files. The #3/#6 architecture conflict and #7's stacked base must be resolved before merge.
 - **Velnor:** PR #37 standalone-boundary CI passed. PR #33 is an optional Blud bridge track that conflicts with the newer no-coupling direction in #37. Several older delivery PRs are stacked on one another and require dependency-aware review.
 - **NYR:** PR #5 passed full host, build, ISO and QEMU validation. PR #7 is based on main and must be rebased/retested after the heap/scheduler repair is integrated.
-- **Cipher Messenger and Quietline Messenger:** their fail-closed E2EE policy PRs (#3) passed tests, type-check and production builds. They still lack verified public homeserver deployments and independent public launch evidence.
+- **Cipher Messenger and Quietline Messenger:** the fail-closed E2EE policy, HTTPS homeserver validation, regression tests and CI checks are now consolidated into each repository's readiness PR #2. Final CI passed (Cipher 44359914657; Quietline 44360006867); duplicate PR #3 was closed in each repository. They still lack verified public homeserver deployments and independent public launch evidence.
 - **AERYN:** contract CI and Foundry tests passed on PR #3. No mainnet deployment or public mint is claimed.
 - **demo-repository:** HTML proof workflow passed. The latest auto-assignment failure was caused by the main-branch workflow also triggering on pull requests and passing an unsupported action input; the readiness branch corrects both by restricting the trigger to newly opened issues and removing the unsupported input. The corrected issue-event path still needs a real issue-open event test. It remains an internal demonstration.
 - **Vectolith company repository:** documentation/governance only; no application CI is applicable.
@@ -107,7 +107,7 @@ The current global search returns **60 open PRs**:
 
 ### Merge and dependency observations
 
-- All 60 open PRs were enumerated. PR metadata was inspected for base branch, head branch, head SHA, draft state, GitHub mergeability, update time and changed-file count.
+- All 60 open PRs were initially enumerated and metadata-inspected; two duplicate E2EE PRs were subsequently closed, leaving 58 open. PR metadata was inspected for base branch, head branch, head SHA, draft state, GitHub mergeability, update time and changed-file count.
 - GitHub's mergeable=true is only a conflict signal; it is not approval, passing CI, semantic compatibility or release readiness.
 - Blud #7 is stacked on #3, while #6 proposes removing the bridge. Velnor #33 depends on #3, while #37 removes the dependency. Treat these as conflicting architectural tracks, not independently mergeable changes.
 - Velnor #27, #28, #30, #31 and #32 form a stacked delivery chain; #29 and #30 currently report merge conflicts. PRs #23 and #21 also report merge conflicts and need rebase/review before acceptance.
