@@ -7,9 +7,45 @@
 
 ## Executive result
 
-The shared public-product standard has been proposed across the 12 repositories through repository-specific branches and pull requests. A fresh account-wide GitHub search at 2026-11-18 18:20 +01:00 returned **51 open pull requests** across the 12 repositories after eight duplicate product-identity, standalone-boundary, E2EE and company-portfolio PRs were consolidated and closed and company governance PR #1 was merged; several repositories have multiple overlapping or stacked PRs, so this is not a one-PR-per-repository programme. Repository visibility settings were not changed.
+The public-product standard is merged into company governance and eight product repositories. A fresh account-wide GitHub search on 2026-11-18 returned **28 open pull requests** across the 12 repositories after duplicate tracks were consolidated and readiness work was merged. Several repositories still have overlapping or stacked implementation tracks; this is not a one-PR-per-repository programme. Repository visibility settings were not changed.
 
-The audit found multiple real engineering and release blockers. Several have been corrected and verified through GitHub Actions. No repository has a published GitHub release. Cloudflare account inspection found no Pages projects and no Velnor-specific Worker; deployments hosted elsewhere were not verified. No product is being represented as production-ready solely because its documentation or CI passes.
+The audit found multiple real engineering and release blockers. Several have been corrected and verified through GitHub Actions. No repository has a published GitHub release. Cloudflare account inspection found two Workers (`olli` and `velnor-github-ruleset-manager`) and zero Pages projects; neither Worker is verified as a product runtime. Deployments hosted elsewhere were not verified. No product is being represented as production-ready solely because its documentation or CI passes.
+
+## Live recheck — 2026-11-18
+
+### Current open pull-request inventory
+
+| Repository | Open PRs |
+|---|---:|
+| Velnor | 14 |
+| Models by vectolith | 5 |
+| VaultETH | 1 |
+| NYR | 3 |
+| Blud | 2 |
+| demo-repository | 2 |
+| my-project | 1 |
+| **Total** | **28** |
+
+### Verified changes and current release gates
+
+- **Company governance:** PR #1 merged. This audit is maintained on the default branch.
+- **Cipher Messenger and Quietline Messenger:** readiness PR #2 merged in each repository. Their standalone boundaries, fail-closed E2EE send policy, HTTPS homeserver validation, regression tests and CI are on the default branches. Neither has a verified managed public homeserver or public launch.
+- **VaultETH:** readiness PR #75 merged. Security PR #74 is still draft but is now mergeable; its exact current head passed both Android and iOS CI (runs 44363814522 and 44363814591). Android recovery-phrase reads, legacy cross-chain address derivation and native signing require fresh strong-biometric-bound Keystore proof in the reviewed source paths. Physical-device security testing, independent review, store identity/URLs, signing and release approval remain outstanding. No real-fund or store-release approval is claimed.
+- **Models by vectolith:** readiness PR #78 merged. PRs #73, #75, #76 and #79 remain active tracks. Current evidence includes passing Core Prime runtime/evaluation and Vectolith Runtime checks on #76, and passing runtime/evaluation checks on #79. Teacher qualification, legal/provenance review, independent human adjudication, protected holdout evidence and training authorization remain release gates.
+- **PLUCO Network:** readiness PR #4 and separately versioned V2 successor PR #10 merged. Main-branch contract verification run 44364688447 passed **91 Foundry tests**, verifier syntax checks and public Base RPC checks. The verifier confirmed all eight manifest transactions, three deployed V1 executable runtimes against Foundry artifacts, ownership/treasury/fee/supply/mint-price/registry/royalty state. V2 remains source-only and undeployed. V1 has documented immutable-contract limitations; independent specialist review and explorer source verification remain outstanding.
+- **Blud:** standalone-boundary PR #6 merged. Main-branch CI run 44364193704 passed. The fake browser-worker endpoint and Velnor bridge were removed; Blud no longer requires Velnor for its core operation. PRs #3 and #7 were closed as rejected/superseded tracks. Remaining PRs #1 and #2 need separate security, account-lifecycle and functionality review.
+- **Velnor:** standalone-boundary PR #37 merged. Main-branch production CI run 44364105920 passed. The Blud bridge PR #33 was closed; Velnor no longer requires Blud for core operation. Fourteen open PRs remain, including stacked messaging, storage, provider and delivery tracks; #29/#30 and other dependency chains still require conflict/dependency review before merge.
+- **AERYN:** standalone and contract-verification PR #5 merged. Main contract CI run 44364331741 passed. It remains an owner-minted ERC-721 source project; no live deployment, public mint or independent contract audit is claimed.
+- **NYR:** PR #5 remains draft despite passing host memory, clean/incremental build, ELF/ISO and QEMU validation. PRs #3/#4 are dependency update tracks; #7 is the standalone product documentation track. OS release and broad hardware compatibility are not claimed.
+- **demo-repository:** the HTML proof workflow passed. The issue auto-assignment correction still needs a real issue-open event test. It remains an internal demonstration, not a Vectolith public product.
+- **my-project:** no product build or deployable application is declared. It remains an unclassified placeholder and must not be counted as a viable public product.
+
+### Dependency and architecture decisions
+
+- The Velnor-to-Blud browser integration is not part of the default architecture. Any future cross-product adapter requires explicit approval and must remain optional and removable without impairing either product.
+- PLUCO V1 remains immutable. Security fixes are introduced as separately versioned successors; V2 has not been deployed or authorized for migration.
+- Do not merge draft PRs, stacked PRs, or PRs with failing/conflicting checks merely because GitHub reports a mergeable branch.
+- A green CI run verifies only the checks that actually ran on that exact commit. It does not replace physical-device testing, independent security review, legal review, or production deployment verification.
 
 ## Repository findings and current evidence
 
