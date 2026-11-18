@@ -1,7 +1,7 @@
 # Vectolith Public Repository Consolidation Snapshot
 
 **Review date:** 2026-11-18  
-**Scope:** Public repositories in the Vectolith portfolio, excluding private repositories and the `my-project` workspace slated for removal.  
+**Scope:** Public repositories in the Vectolith portfolio, excluding private repositories and repositories not designated as active products.  
 **Purpose:** Compare discovered branches with each repository's own `main`, review open pull-request readiness, and record verified consolidation actions. This is a point-in-time engineering snapshot, not a production certification.
 
 ## Product boundary
