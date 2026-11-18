@@ -77,9 +77,9 @@ Cipher owns its own messaging client, identity and device model, encryption stat
 
 Quietline owns its own messaging client, identity and device model, encryption state, homeserver configuration, storage, user experience and release lifecycle. It must operate independently and must not require Cipher or another Vectolith product. Its current scaffold substantially overlaps Cipher; a distinct product specification is still needed, but that does not authorize a shared runtime or a forced consolidation.
 
-### AERYN — autonomous intelligence and research
+### AERYN — on-chain generative art and NFT collection
 
-AERYN owns its own product requirements, research workflow, source retrieval, provenance, synthesis, data handling, runtime, evaluation and release lifecycle. Its detailed specification and implementation remain to be established. It must not depend on Velnor or Models by Vectolith.
+AERYN owns its ERC-721 contract, on-chain token metadata/artwork, mint authorization, deployer/owner key custody, chain verification and release lifecycle. It does not depend on PLUCO Network, VaultETH, or another Vectolith product. Any marketplace, wallet or indexing integration must remain optional and use standard ERC-721 interfaces.
 
 ## 5. Repository classification
 
