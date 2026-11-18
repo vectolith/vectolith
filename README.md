@@ -25,7 +25,7 @@ Products retain independent architectures, technical roadmaps and release lifecy
 | [Velnor](https://github.com/vectolith/velnor) | General-purpose AI agent platform, integrations and execution runtime | Active development; production deployment and live-provider evidence must be assessed per release |
 | [Blud](https://github.com/vectolith/blud) | Personal agent and browser-execution product | Active development; its README currently states it is not intended for production use and documents a Vercel Pro requirement |
 | [Models by Vectolith](https://github.com/vectolith/Models-by-vectolith.) | Model family, foundation selection, training, evaluation and releases | Research and infrastructure stage; no foundation selected and no student training/release claimed |
-| [PLUCO Network](https://github.com/vectolith/pluco-network) | Base digital-ownership protocol and marketplace | Contract deployment claims require reconciliation; Foundry tests are documented but not yet in CI |
+| [PLUCO Network](https://github.com/vectolith/pluco-network) | Base digital-ownership protocol and marketplace | Contract deployment claims require independent chain verification; Foundry contract-test and build-check workflows now pass on the open PR |
 | [VaultETH](https://github.com/vectolith/VaultETH) | Native self-custodial wallet for iOS and Android | Native implementation with explicit real-money release gates; web surface is a demo sandbox |
 | [NYR](https://github.com/vectolith/NYR) | From-scratch x86-64 operating-system kernel research | Early-kernel milestone; not a complete general-purpose OS |
 | [Cipher Messenger](https://github.com/vectolith/Cipher-messenger) | Encrypted messaging initiative | Phase 0 local Matrix/Synapse E2EE validation |
