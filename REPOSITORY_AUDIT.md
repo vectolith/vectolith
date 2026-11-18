@@ -101,7 +101,7 @@ The current global search returns **60 open PRs**:
 - **NYR:** PR #5 passed full host, build, ISO and QEMU validation. PR #7 is based on main and must be rebased/retested after the heap/scheduler repair is integrated.
 - **Cipher Messenger and Quietline Messenger:** their fail-closed E2EE policy PRs (#3) passed tests, type-check and production builds. They still lack verified public homeserver deployments and independent public launch evidence.
 - **AERYN:** contract CI and Foundry tests passed on PR #3. No mainnet deployment or public mint is claimed.
-- **demo-repository:** HTML proof workflow passed; the auto-assignment workflow has a failed run and requires a separate check. It remains an internal demonstration.
+- **demo-repository:** HTML proof workflow passed. The latest auto-assignment failure was caused by the main-branch workflow also triggering on pull requests and passing an unsupported action input; the readiness branch corrects both by restricting the trigger to newly opened issues and removing the unsupported input. The corrected issue-event path still needs a real issue-open event test. It remains an internal demonstration.
 - **Vectolith company repository:** documentation/governance only; no application CI is applicable.
 - **my-project:** no product build is declared; it remains an unclassified placeholder.
 
