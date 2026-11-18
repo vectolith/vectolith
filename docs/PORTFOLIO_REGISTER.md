@@ -52,14 +52,14 @@ The [independent product-boundary baseline](PRODUCT_BOUNDARIES.md) defines the r
 
 Do not use "Active" as a substitute for maturity. Record lifecycle stage and release status separately.
 
-## Current cross-product coupling findings
+## Cross-product dependency policy
 
-The default architecture is zero mandatory Vectolith-to-Vectolith dependencies. The following are optional integration candidates only; they are not release prerequisites:
+No Vectolith product-to-product integration is part of the default architecture or a release requirement. Product-to-product calls, shared credentials, shared databases, shared identity, shared runtime processes and synchronized deployments are prohibited unless separately justified and explicitly approved.
 
-1. **Velnor ↔ Blud:** A browser execution adapter may be offered between the products. It must remain optional. Velnor's core agent functions must not require Blud, and Blud's standalone browser-agent functions must not require Velnor. Existing bridge work must not be represented as a production dependency or complete integration until the real browser-agent runtime and end-to-end evidence exist.
-2. **PLUCO ↔ VaultETH:** PLUCO may support standard wallet connection protocols. VaultETH is not required; any standards-compliant supported wallet may be used.
-3. **Models by Vectolith ↔ application products:** Applications may optionally call a released model through a published interface. They own their own provider adapter, policy, identity, persistence and fallback; the model repository's runtime is not a shared product service.
-4. **Cipher ↔ Quietline:** These are separate product repositories and must remain independently buildable and operable. Their current scaffolds overlap; distinct user problems and requirements remain to be specified independently. No shared runtime or forced consolidation is authorized.
+- **Velnor and Blud:** The Velnor browser delegation tool and adapter have been removed from Velnor. Blud's legacy `/api/internal/browser-worker` endpoint is retired with HTTP 410 because it returned success-shaped responses without real browser execution. Each product continues independently.
+- **PLUCO Network and VaultETH:** PLUCO supports external wallet standards and providers. VaultETH is not required; any standards-compliant wallet may be selected by the user.
+- **Models by Vectolith and application products:** No application is required to use these models or this repository's runtime. Any future model consumption must use a product-owned adapter and be independently operable and replaceable.
+- **Cipher and Quietline:** Separate products with independent repositories, homeserver configuration and release processes. No shared runtime or shared operational service is assumed.
 
 ## Maintenance
 
