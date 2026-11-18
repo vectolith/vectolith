@@ -27,9 +27,9 @@ This register is the company portfolio index for Vectolith-owned products and in
 | [NYR](https://github.com/vectolith/NYR) | Public | From-scratch x86-64 operating-system kernel research | Reproducible toolchain, boot validation, memory management and early SMP/APIC work are documented; README explicitly says this is not a complete general-purpose OS | Continue gated kernel milestones; do not overstate OS completeness |
 | [Cipher-messenger](https://github.com/vectolith/Cipher-messenger) | Private | Encrypted messaging research/product candidate | Phase 0 local Matrix/Synapse E2EE validation plan; no custom client is claimed | Prove E2EE and decide product differentiation before client development |
 | [quietline-messenger](https://github.com/vectolith/quietline-messenger) | Private | Encrypted messaging research/product candidate | Phase 0 local Matrix/Synapse E2EE validation plan; substantially overlaps Cipher's documented scope | Decide whether it is a distinct product or consolidate the duplicate foundation |
-| [AERYN](https://github.com/vectolith/AERYN) | Private | Autonomous intelligence and research synthesis initiative | initial product-charter PR is open; no implementation or release maturity is established | Write product charter, architecture, scope, milestones and verification plan |
-| [demo-repository](https://github.com/vectolith/demo-repository) | Private | GitHub demonstration/template repository | README describes a generic GitHub demonstration repository, not a Vectolith product | Classify as internal tooling/demo or archive/remove from product portfolio |
-| [my-project](https://github.com/vectolith/my-project) | Public | Unclassified placeholder | README contains only a placeholder line | Identify purpose or archive |
+| [AERYN](https://github.com/vectolith/AERYN) | Private | Vectolith autonomous intelligence and research synthesis product | Product charter is proposed in AERYN PR #1; no implementation or release maturity is established | Complete product requirements, architecture, threat model and verification plan |
+| [demo-repository](https://github.com/vectolith/demo-repository) | Private | Vectolith-owned internal demonstration/template asset | README describes a generic GitHub demonstration repository; it is not currently classified as a customer-facing product | Retain as internal asset or archive when no longer needed |
+| [my-project](https://github.com/vectolith/my-project) | Public | Vectolith-owned repository; product classification pending | README contains only a placeholder line, so no product purpose or capabilities can yet be established | Define its Vectolith product purpose or archive the placeholder |
 
 ## Product boundaries and relationships
 
@@ -58,7 +58,7 @@ Products may consume released models through stable contracts. Product runtimes 
 ### Research initiatives
 
 - **NYR** is low-level OS/kernel research. It is not a Vectolith operating-system platform dependency and must not be used to redefine the scope of other products.
-- **AERYN** is an unclassified research initiative until its specification and implementation evidence are published.
+- **AERYN** is a Vectolith research product; its detailed specification and implementation evidence remain pending.
 - **Cipher Messenger** and **Quietline Messenger** are separate repositories with materially overlapping Phase 0 plans. Their differentiation must be decided before parallel product investment.
 
 ## Portfolio status vocabulary
