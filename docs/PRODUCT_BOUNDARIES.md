@@ -28,7 +28,7 @@ A product may use external open-source libraries, infrastructure providers, mode
 
 ## 3. Optional integration rules
 
-An optional product-to-product integration is permitted only when it adds a distinct user benefit and is explicitly chosen by the product owner. It must satisfy all of the following:
+The default is no product-to-product integration. Do not design, ship or assume one merely because products share Vectolith ownership. A future integration is permitted only when it adds a distinct user benefit and receives separate explicit approval. It must satisfy all of the following:
 
 1. The integrating product works for its core purpose when the integration is disabled or unavailable.
 2. The integration is opt-in, replaceable and documented; no silent fallback may make it mandatory.
