@@ -19,7 +19,7 @@ The policy applies to all repositories owned or operated by Vectolith. The follo
 | `vectolith/NYR` | x86-64 kernel research | Research | Kernel-specific memory, privilege and interrupt safety review required |
 | `vectolith/Cipher-messenger` | Matrix-based encrypted messaging | Phase 0 research | Local E2EE validation only; not a released messaging product |
 | `vectolith/quietline-messenger` | Matrix-based encrypted messaging | Phase 0 research | Local E2EE validation only; scope overlap with Cipher unresolved |
-| `vectolith/AERYN` | Autonomous intelligence research | Unclassified | Specification and threat model not yet evidenced |
+| `vectolith/AERYN` | Autonomous intelligence and research synthesis | Research/specification; not released | Initial product charter is proposed; detailed specification and threat model remain outstanding |
 | `vectolith/demo-repository` | GitHub demonstration | Internal demo | Not a supported product |
 | `vectolith/my-project` | Unclassified placeholder | Unclassified | No product support claim |
 
