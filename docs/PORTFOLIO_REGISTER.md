@@ -19,7 +19,7 @@ This register is a snapshot of repository documentation, not a certification of 
 
 | Repository | Visibility | Portfolio role | Evidence-backed current position | Main next gate |
 |---|---|---|---|---|
-| [vectolith](https://github.com/vectolith/vectolith) | Public | Company identity, portfolio index, shared governance | Central README and security policy exist; README does not yet accurately enumerate the full portfolio | Maintain this register and company-wide standards as the source of truth |
+| [vectolith](https://github.com/vectolith/vectolith) | Public | Company identity, portfolio index, shared governance | Central README now provides a portfolio overview; this register remains the detailed canonical inventory | Maintain this register and company-wide standards as the source of truth |
 | [velnor](https://github.com/vectolith/velnor) | Public | General-purpose AI agent platform and integration/runtime layer | Messaging and API surfaces, provider routing, tenant state, operational documentation and automated checks are documented; OCI is identified as current production deployment of record | Verify live provider delivery, operational observability, retention, global rate limits and release consolidation |
 | [blud](https://github.com/vectolith/blud) | Public | Personal agent and browser-execution product | Browser automation, credential vault and integrations are documented; README explicitly says the software is not intended for production use and requires Vercel Pro for its scheduled-work model | Resolve production status, operating-cost model and relationship to Velnor |
 | [Models-by-vectolith.](https://github.com/vectolith/Models-by-vectolith.) | Public | Model family, foundation selection, training, evaluation, registry and releases | Extensible family architecture and evaluation/training infrastructure are documented; no foundation is selected and no student training/release is claimed | Complete legal, teacher, data, human-evaluation and foundation gates before training |
@@ -84,7 +84,6 @@ Do not use "Active" as a substitute for maturity. Record lifecycle stage and rel
 4. **VaultETH ownership:** repository copyright identifies `pluco.dev`, while it is presented as a Vectolith product. Record the legal owner, license authority and any assignment or licence.
 5. **Cipher/Quietline duplication:** establish whether the products have distinct threat models, user groups, protocols or product requirements.
 6. **AERYN specification gap:** do not represent it as an implemented autonomous research engine until evidence exists.
-7. **Security policy coverage:** the central policy's supported-repository table does not enumerate the full portfolio.
 8. **Cost and dependency transparency:** record required paid tiers, free-tier quotas, external providers and failure modes per product. The Models by Vectolith zero-budget constraint remains absolute for that project.
 
 ## Maintenance
