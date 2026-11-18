@@ -6,7 +6,7 @@
 
 **Autonomous Intelligence · Applied Systems Engineering · Digital Ownership**
 
-[Portfolio Register](docs/PORTFOLIO_REGISTER.md) · [Engineering Governance](docs/ENGINEERING_GOVERNANCE.md) · [Security Policy](SECURITY.md)
+[Portfolio Register](docs/PORTFOLIO_REGISTER.md) · [Product Boundaries](docs/PRODUCT_BOUNDARIES.md) · [Engineering Governance](docs/ENGINEERING_GOVERNANCE.md) · [Security Policy](SECURITY.md)
 
 </div>
 
