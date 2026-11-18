@@ -78,11 +78,11 @@ Do not use "Active" as a substitute for maturity. Record lifecycle stage and rel
 ## Known cross-project risks requiring resolution
 
 1. **Portfolio source of truth:** keep the company README synchronized with this detailed register; the register is authoritative when the summary and repository-level documentation differ.
-2. **Blud/Velnor overlap:** define which product owns messaging orchestration, browser execution, memory, scheduling, and integration contracts.
+2. **Blud/Velnor integration:** implement and verify the proposed authenticated browser-execution contract; do not assume the integration is already live.
 3. **PLUCO deployment contradiction:** reconcile the listed Base deployment addresses against the statement that no contracts are deployed. Require chain ID, transaction hashes, deployer/owner, verified source, bytecode match, and deployment commit.
 4. **VaultETH company attribution:** the repository README and proprietary license metadata must consistently identify Vectolith as the product owner and rights holder.
-5. **Cipher/Quietline duplication:** establish whether the products have distinct threat models, user groups, protocols or product requirements.
-6. **AERYN specification gap:** do not represent it as an implemented autonomous research engine until evidence exists.
+5. **Cipher/Quietline differentiation:** their Phase 0 READMEs are nearly identical except for the local server name. Retain both products and define distinct user problems, threat models and product requirements before building separate clients.
+6. **AERYN specification gap:** an initial charter now exists in the AERYN repository; approve a detailed PRD and threat model before implementation or capability claims.
 7. **External dependency transparency:** record required services, operational limits, external providers and failure modes per product.
 
 ## Maintenance
