@@ -58,7 +58,7 @@ This document defines product responsibilities to reduce accidental duplication.
 
 ## 6. Cipher Messenger and Quietline Messenger — separate messaging products
 
-Both repositories remain Vectolith products. Their current documented Phase 0 foundations overlap around Matrix/Synapse and end-to-end-encryption validation. The available repository documentation does not yet establish a defensible distinction in target user, threat model, product experience or protocol.
+Both repositories remain Vectolith products. Their current README files are nearly identical Phase 0 Matrix/Synapse and end-to-end-encryption validation guides; the material difference is the local homeserver name (`cipher.local` versus `quietline.local`). The available documentation does not establish a defensible distinction in target user, threat model, product experience or protocol.
 
 Until each product has an approved specification:
 
