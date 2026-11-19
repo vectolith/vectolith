@@ -1,0 +1,26 @@
+name: Company docs consistency
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: vectolith-docs-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check links and portfolio agreement
+        run: python tools/check_docs.py
