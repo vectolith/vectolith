@@ -12,11 +12,25 @@
 
 <div align="center">
 
-<img src="./assets/branding/vectolith-blueprint.svg" alt="Vectolith geometric emblem technical blueprint" width="100%" />
+<img src="./assets/branding/vectolith-blueprint.svg" alt="Vectolith geometric emblem and wordmark technical blueprint" width="100%" />
 
 <sub>Canonical repository identity · Blueprint edition</sub>
 
 </div>
+
+### Brand asset library
+
+Individual identity components are available separately:
+
+- [Geometric mark](assets/branding/separated/mark.svg)
+- [Wordmark](assets/branding/separated/wordmark.svg)
+- [Horizontal logo](assets/branding/separated/logo-horizontal.svg)
+- [Stacked logo](assets/branding/separated/logo-stacked.svg)
+- [Construction study](assets/branding/separated/construction.svg)
+- [Clear-space guide](assets/branding/separated/clear-space.svg)
+- [Color reference](assets/branding/separated/colors.svg)
+
+See [asset documentation](assets/branding/separated/README.md) for inventory and typography notes.
 
 ## Company
 
