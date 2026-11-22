@@ -12,6 +12,14 @@
 
 ---
 
+<div align="center">
+
+<img src="./assets/branding/vectolith-blueprint.svg" alt="Vectolith geometric emblem technical blueprint" width="100%" />
+
+<sub>Geometric identity study · Blueprint edition</sub>
+
+</div>
+
 ## Company
 
 **Vectolith** (*VEK-to-lith* — **Vector** + **Monolith**) is a technology company that owns and develops independent products and research projects across AI, model development, autonomous software, digital ownership, cryptography and systems engineering.

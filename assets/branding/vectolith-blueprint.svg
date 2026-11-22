@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-labelledby="title desc">
+<title id="title">Vectolith — Geometric Structure Blueprint</title>
+<desc id="desc">White schematic drawing of the Vectolith geometric emblem on a cobalt blueprint grid with dimensions, alternate studies and technical notes.</desc>
+<defs>
+ <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#2455a8" stroke-width="1"/></pattern>
+ <pattern id="major" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M120 0H0V120" fill="none" stroke="#3569b7" stroke-width="1.2"/></pattern>
+ <style>
+  text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#f4f6ff}
+  .line{fill:none;stroke:#f4f6ff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+  .thin{fill:none;stroke:#f4f6ff;stroke-width:1.8}
+  .dash{stroke-dasharray:9 8}
+ </style>
+</defs>
+<rect width="1200" height="1400" fill="#082e83"/><rect width="1200" height="1400" fill="url(#grid)"/><rect width="1200" height="1400" fill="url(#major)"/>
+<rect x="22" y="22" width="1156" height="1356" class="thin"/>
+<path class="thin" d="M30 46h16m-16 0v16M1170 46h-16m16 0v16M30 1354h16m-16 0v-16M1170 1354h-16m16 0v-16"/>
+<text x="52" y="76" font-size="30">GEOMETRIC STRUCTURE — TECHNICAL BLUEPRINT</text><path class="thin" d="M48 94H740"/>
+<text x="880" y="64" font-size="18">PROJECT: VECTOLITH</text><text x="880" y="90" font-size="18">SUBJECT: CORE GEOMETRY</text><path class="thin" d="M878 104H1150"/>
+<!-- dimensioning -->
+<path class="thin" d="M145 230V170M650 230V170M145 180H650M145 180l16 -8m-16 8l16 8M650 180l-16 -8m16 8l-16 8"/>
+<text x="345" y="160" font-size="22">W = 160</text>
+<path class="thin" d="M110 250H70M110 950H70M80 250V950M80 250l-8 16m8-16l8 16M80 950l-8-16m8 16l8-16"/>
+<text x="58" y="610" font-size="22" transform="rotate(-90 58 610)">H = 240</text>
+<!-- primary emblem, matching existing vector mark proportions -->
+<g transform="translate(0 0)" class="line">
+ <path d="M397 230L650 350V850L397 970L145 850V350Z"/>
+ <path d="M397 230V970"/>
+ <path d="M397 230L285 420L397 530L509 420Z"/>
+ <path d="M145 350L285 420M650 350L509 420"/>
+ <path d="M145 350L397 600L650 350M145 850L397 600L650 850"/>
+ <path d="M397 970L285 780L397 670L509 780Z"/>
+ <path d="M145 850L285 780M650 850L509 780"/>
+ <path d="M285 420V780M509 420V780"/>
+ <path d="M330 540L397 600L330 660L397 600M464 540L397 600L464 660"/>
+</g>
+<!-- central guides -->
+<path class="thin dash" d="M100 600H700M397 190V1010"/>
+<text x="325" y="1040" font-size="24">FRONT VIEW</text><text x="355" y="1070" font-size="16">SCALE 1:1</text>
+<!-- alternate view -->
+<g transform="translate(805 200) scale(.66)" class="thin">
+ <path d="M397 230L650 350V850L397 970L145 850V350Z"/>
+ <path d="M397 230V970M397 230L285 420L397 530L509 420Z M145 350L285 420M650 350L509 420 M145 350L397 600L650 350M145 850L397 600L650 850M397 970L285 780L397 670L509 780Z M145 850L285 780M650 850L509 780M285 420V780M509 420V780"/>
+ <path d="M330 540L397 600L330 660L397 600M464 540L397 600L464 660"/>
+</g>
+<text x="825" y="620" font-size="20">ALT VIEW (SIMPLIFIED)</text><text x="890" y="650" font-size="16">SCALE 1:2</text>
+<!-- construction study -->
+<g transform="translate(820 700) scale(.58)" class="thin dash">
+ <path d="M397 230L650 350V850L397 970L145 850V350Z"/>
+ <path d="M397 230V970M145 350L397 600L650 350M145 850L397 600L650 850M285 420V780M509 420V780M397 230L285 420L397 600L509 420L397 230M397 600L285 780L397 970L509 780L397 600"/>
+ <circle cx="397" cy="600" r="6"/>
+</g>
+<text x="820" y="1280" font-size="20">CONSTRUCTION GUIDE</text>
+<path class="thin" d="M48 1100H1150"/>
+<text x="60" y="1140" font-size="22">KEY DIMENSIONS</text>
+<text x="60" y="1180" font-size="18">HEIGHT (H)  /  240</text><text x="60" y="1215" font-size="18">WIDTH (W)   /  160</text><text x="60" y="1250" font-size="18">ASPECT       /  3:2</text><text x="60" y="1285" font-size="18">CENTER       /  (0,0)</text>
+<path class="thin" d="M440 1120V1320"/><text x="480" y="1140" font-size="22">NOTES</text><text x="480" y="1180" font-size="18">1. VERTICAL AXIS SYMMETRY.</text><text x="480" y="1215" font-size="18">2. HEXAGONAL OUTER CONTOUR.</text><text x="480" y="1250" font-size="18">3. INTERSECTING DIAGONALS</text><text x="505" y="1285" font-size="18">AND CENTRAL SPINE.</text>
+</svg>
