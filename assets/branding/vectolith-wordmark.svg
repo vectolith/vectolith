@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+<title id="title">Vectolith wordmark</title><desc id="desc">Geometric Vectolith emblem above a refined uppercase Vectolith wordmark in a geometric sans-serif style.</desc>
+<rect width="900" height="360" fill="#071e54"/>
+<g fill="none" stroke="#f7f9ff" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" transform="translate(350 22) scale(.45)">
+<path d="M397 230L650 350V850L397 970L145 850V350Z"/>
+<path d="M397 230V970"/>
+<path d="M397 230L285 420L397 530L509 420Z"/>
+<path d="M145 350L285 420M650 350L509 420"/>
+<path d="M145 350L397 600L650 350M145 850L397 600L650 850"/>
+<path d="M397 970L285 780L397 670L509 780Z"/>
+<path d="M145 850L285 780M650 850L509 780"/>
+<path d="M285 420V780M509 420V780"/>
+<path d="M330 540L397 600L330 660L397 600M464 540L397 600L464 660"/>
+</g>
+<text x="450" y="300" text-anchor="middle" font-family="'Space Grotesk', 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif" font-weight="600" font-size="78" letter-spacing="12" fill="#f7f9ff">VECTOLITH</text>
+</svg>
