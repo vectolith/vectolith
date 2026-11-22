@@ -1,10 +1,12 @@
 <div align="center">
 
-<img src="./assets/branding/vectolith-wordmark.svg" alt="Vectolith" width="520" />
+<img src="assets/branding/separated/logo-stacked.svg" alt="Vectolith" width="360" />
 
-**Autonomous Intelligence · Applied Systems Engineering · Digital Ownership**
+### Autonomous Intelligence · Applied Systems Engineering · Digital Ownership
 
-[Independent Product Portfolio](docs/PORTFOLIO_REGISTER.md) · [Public Product Standard](PUBLIC_PRODUCT_STANDARD.md) · [Repository Audit](REPOSITORY_AUDIT.md) · [Product Boundaries](docs/PRODUCT_BOUNDARIES.md) · [Engineering Governance](docs/ENGINEERING_GOVERNANCE.md) · [Security Policy](SECURITY.md)
+**An independent technology company building products and research across AI, software, cryptography and digital ownership.**
+
+[Portfolio](docs/PORTFOLIO_REGISTER.md) · [Engineering Governance](docs/ENGINEERING_GOVERNANCE.md) · [Product Boundaries](docs/PRODUCT_BOUNDARIES.md) · [Public Product Standard](PUBLIC_PRODUCT_STANDARD.md) · [Security](SECURITY.md)
 
 </div>
 
@@ -12,74 +14,131 @@
 
 <div align="center">
 
-<img src="./assets/branding/vectolith-blueprint.svg" alt="Vectolith geometric emblem and wordmark technical blueprint" width="100%" />
+<img src="assets/branding/vectolith-blueprint.svg" alt="Vectolith geometry blueprint, emblem and wordmark" width="100%" />
 
-<sub>Canonical repository identity · Blueprint edition</sub>
+<sub>Identity blueprint · Mark and wordmark construction</sub>
 
 </div>
 
-### Brand asset library
+## About Vectolith
 
-Individual identity components are available separately:
+**Vectolith** (*VEK-to-lith*, from *Vector* + *Monolith*) is a technology company developing independent products and research projects across artificial intelligence, model development, autonomous software, digital ownership, cryptography and systems engineering.
 
-- [Geometric mark](assets/branding/separated/mark.svg)
-- [Wordmark](assets/branding/separated/wordmark.svg)
-- [Horizontal logo](assets/branding/separated/logo-horizontal.svg)
-- [Stacked logo](assets/branding/separated/logo-stacked.svg)
-- [Construction study](assets/branding/separated/construction.svg)
-- [Clear-space guide](assets/branding/separated/clear-space.svg)
-- [Color reference](assets/branding/separated/colors.svg)
+Vectolith is the company identity and owner—not a shared product platform. Each product has its own purpose, implementation, runtime, data, authentication and authorization, deployment, operations, roadmap and release lifecycle.
 
-See [asset documentation](assets/branding/separated/README.md) for inventory and typography notes.
+Company-wide principles and standards may guide security, privacy, documentation and engineering quality. They do not create mandatory shared runtime services, databases, credentials, APIs or cross-product dependencies.
 
+## Product portfolio
 
-### Icon library
-
-- [Browse icon library preview](assets/branding/icons/index.html)
-- [SVG icon sprite](assets/branding/icons/icons.svg)
-- [Favicon SVG](assets/branding/icons/favicon.svg)
-- [Icon usage and inventory](assets/branding/icons/README.md)
-
-## Company
-
-**Vectolith** (*VEK-to-lith* — **Vector** + **Monolith**) is a technology company that owns and develops independent products and research projects across AI, model development, autonomous software, digital ownership, cryptography and systems engineering.
-
-Vectolith is the company identity and owner—not a shared product platform. Every product has its own purpose, implementation, runtime, data stores, authentication and authorization, deployment, operations, roadmap, and release lifecycle. No Vectolith product is required to install, call, authenticate through, store data in, or otherwise depend on another Vectolith product.
-
-The company may establish consistent security, privacy, legal, documentation and engineering standards. Those standards do not create shared runtime services, shared credentials, shared databases, mandatory APIs, cross-product release gates or operational dependencies.
-
-## Portfolio
-
-| Product | Independent purpose | Current documented position |
+| Product | Focus | Development position |
 |---|---|---|
-| [Velnor](https://github.com/vectolith/velnor) | General-purpose AI agent product with its own orchestration, integrations and execution runtime | Active development; production deployment and live-provider evidence must be assessed per release |
-| [Blud](https://github.com/vectolith/blud) | Standalone personal agent with browser automation and protected credential vault | Active development; its README documents deployment requirements and current production limitations |
-| [Models by Vectolith](https://github.com/vectolith/Models-by-vectolith.) | Independent model research and model product: specifications, foundation selection, training, evaluation, artifacts and releases | Active research and evaluation; no foundation selection, student training run or public model release is claimed |
-| [Pluco](https://github.com/vectolith/pluco-network) | Independent digital-ownership protocol and marketplace | Contract deployment claims require independent chain verification; release evidence is maintained in its own repository |
-| [NYR](https://github.com/vectolith/NYR) | Independent from-scratch x86-64 operating-system project | Early-kernel milestone; not a complete general-purpose OS |
-| VaultETH | Native self-custodial wallet for iOS and Android | Development-stage product; physical-device security, transaction and store-release gates remain |
-| Cipher Messenger | Encrypted messaging product | Development-stage client; managed public homeserver and release evidence are not verified |
-| Quietline Messenger | Encrypted messaging product | Development-stage client; managed public homeserver and release evidence are not verified |
-| AERYN | On-chain generative-art collection | Collection development; no production deployment or public mint is claimed |
+| [Velnor](https://github.com/vectolith/velnor) | Autonomous AI agent, orchestration, integrations and execution | Active development; release and deployment evidence are assessed per release |
+| [BLUD](https://github.com/vectolith/blud) | Personal agent, browser automation and credential protection | Active development; production readiness must be assessed from current release evidence |
+| [Models by Vectolith](https://github.com/vectolith/Models-by-vectolith.) | Model research, specifications, foundation selection, training, evaluation and releases | Active research and evaluation; no model release is claimed here |
+| [Pluco](https://github.com/vectolith/pluco-network) | Digital ownership protocol and marketplace | Development; deployment claims require independently verified chain evidence |
+| [NYR](https://github.com/vectolith/NYR) | From-scratch x86-64 operating-system research | Early kernel development |
+| VaultETH | Native self-custodial wallet for iOS and Android | Development |
+| Cipher Messenger | Encrypted messaging | Development |
+| Quietline Messenger | Encrypted messaging | Development |
+| AERYN | On-chain generative art | Development |
 
-Repository visibility and product maturity are separate. Source visibility does not establish product availability, and a public product does not require its source repository or operational systems to be public. The [portfolio register](docs/PORTFOLIO_REGISTER.md) records product scope and release gates without exposing private repository locations.
+See the [portfolio register](docs/PORTFOLIO_REGISTER.md) for documented boundaries and project status. Repository visibility and product maturity are distinct: source visibility does not establish availability or operational readiness.
+
+## Brand identity
+
+Vectolith's identity is maintained as modular, reusable SVG assets rather than requiring users to extract components from a poster.
+
+<div align="center">
+
+<img src="assets/branding/separated/mark.svg" alt="Vectolith geometric mark" width="180" />
+
+<sub>Geometric emblem</sub>
+
+</div>
+
+| Asset | Description |
+|---|---|
+| [Geometric mark](assets/branding/separated/mark.svg) | Standalone symbol |
+| [Wordmark](assets/branding/separated/wordmark.svg) | VECTOLITH lettering |
+| [Horizontal lockup](assets/branding/separated/logo-horizontal.svg) | Symbol and wordmark side-by-side |
+| [Stacked lockup](assets/branding/separated/logo-stacked.svg) | Symbol above wordmark |
+| [Blueprint](assets/branding/vectolith-blueprint.svg) | Identity geometry and wordmark study |
+| [Construction study](assets/branding/separated/construction.svg) | Illustrative construction reference |
+| [Clear-space guide](assets/branding/separated/clear-space.svg) | Isolation and spacing illustration |
+| [Color reference](assets/branding/separated/colors.svg) | Reference palette |
+
+<details>
+<summary>Typography and color guidance</summary>
+
+- Typography direction: geometric sans-serif.
+- Preferred font family: Space Grotesk.
+- Fallbacks: Manrope, Avenir Next, Segoe UI, sans-serif.
+- Wordmark: uppercase, semibold, optically tracked.
+- Reference blue: `#0033CC`.
+- White: `#FFFFFF`.
+
+The SVG wordmark uses a font stack and is not embedded as outlined paths. For production print or applications where exact typography is required, outline the lettering in a vector editor and retain the editable original. Construction and clear-space diagrams are illustrative, not verified mechanical dimensions.
+
+[Brand asset documentation](assets/branding/separated/README.md)
+
+</details>
+
+## Icon library
+
+The repository also includes a reusable outline icon set, designed for consistent use across documentation, websites and product interfaces.
+
+<div align="center">
+
+<img src="assets/branding/icons/favicon.svg" alt="Vectolith icon emblem" width="120" />
+
+</div>
+
+- [Browse icon library](assets/branding/icons/index.html)
+- [SVG icon sprite](assets/branding/icons/icons.svg)
+- [Favicon](assets/branding/icons/favicon.svg)
+- [Icon inventory and usage](assets/branding/icons/README.md)
+
+<details>
+<summary>Icon system</summary>
+
+- 36 reusable symbols.
+- SVG sprite format.
+- 24 × 24 viewBox.
+- 2-unit outline stroke.
+- Rounded caps and joins.
+- Reference color: `#0033CC`.
+
+Symbols cover navigation, applications, models, runtime, execution, compute, data, integrations, connectivity, security, access, users, settings, monitoring, tasks, scheduling, deployment, development, messaging and common actions.
+
+</details>
 
 ## Engineering principles
 
-1. **Product independence:** each product must build, deploy, operate and fulfil its own purpose without another Vectolith product.
-2. **Public-user quality:** build for accessibility, understandable onboarding, dependable operation and safe failure.
-3. **Real functionality:** do not present mock data, UI-only flows or unverified integrations as working production features.
-4. **Security and privacy:** apply least privilege, product-owned trust boundaries and honest data-flow disclosures.
-5. **Evidence-led releases:** require reproducible builds, tests, dependency review, security review and operational evidence per product.
-6. **Dependency discipline:** identify external services, limits and failure modes; do not rely on unverified service behaviour.
-7. **Clear release status:** distinguish research, development, prototype, beta, production and discontinued capabilities.
+1. **Product independence:** each product builds, deploys and operates independently.
+2. **Public-user quality:** prioritize accessibility, clarity, reliability and safe failure.
+3. **Real functionality:** do not present mock data or unverified integrations as operational features.
+4. **Security and privacy:** enforce least privilege, product-owned trust boundaries and transparent data handling.
+5. **Evidence-led releases:** use reproducible builds, tests, dependency review, security review and operational evidence.
+6. **Dependency discipline:** document service limits, external dependencies and failure modes.
+7. **Honest maturity:** distinguish research, development, prototype, beta and production.
 
-No product-to-product integration is part of the default architecture. A future integration requires separate explicit approval, must be replaceable and must remain nonessential to each product's core purpose. No product may rely on another Vectolith product's runtime, identity service, database, credentials or deployment.
+Cross-product integration is not a default architectural requirement. Any future integration requires explicit approval, must be replaceable and must not become essential to a product's core operation.
 
-See the [company-wide engineering and release governance](docs/ENGINEERING_GOVERNANCE.md) and [security policy](SECURITY.md).
+## Governance and documentation
+
+- [Portfolio register](docs/PORTFOLIO_REGISTER.md)
+- [Engineering governance](docs/ENGINEERING_GOVERNANCE.md)
+- [Product boundaries](docs/PRODUCT_BOUNDARIES.md)
+- [Public product standard](PUBLIC_PRODUCT_STANDARD.md)
+- [Repository audit](REPOSITORY_AUDIT.md)
+- [Security policy](SECURITY.md)
 
 ---
 
 <div align="center">
-  <sub>© 2026 Vectolith · Engineered with precision.</sub>
+
+**Vectolith**
+
+<sub>© 2026 · Engineered with precision.</sub>
+
 </div>
