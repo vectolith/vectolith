@@ -32,6 +32,14 @@ Individual identity components are available separately:
 
 See [asset documentation](assets/branding/separated/README.md) for inventory and typography notes.
 
+
+### Icon library
+
+- [Browse icon library preview](assets/branding/icons/index.html)
+- [SVG icon sprite](assets/branding/icons/icons.svg)
+- [Favicon SVG](assets/branding/icons/favicon.svg)
+- [Icon usage and inventory](assets/branding/icons/README.md)
+
 ## Company
 
 **Vectolith** (*VEK-to-lith* — **Vector** + **Monolith**) is a technology company that owns and develops independent products and research projects across AI, model development, autonomous software, digital ownership, cryptography and systems engineering.
