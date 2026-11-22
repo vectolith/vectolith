@@ -1,18 +1,22 @@
 <div align="center">
 
-<img src="./assets/branding/vectolith-blueprint.svg" alt="Vectolith geometric emblem technical blueprint" width="100%" />
-
-# V E C T O L I T H
+<img src="./assets/branding/vectolith-wordmark.svg" alt="Vectolith" width="520" />
 
 **Autonomous Intelligence · Applied Systems Engineering · Digital Ownership**
 
 [Independent Product Portfolio](docs/PORTFOLIO_REGISTER.md) · [Public Product Standard](PUBLIC_PRODUCT_STANDARD.md) · [Repository Audit](REPOSITORY_AUDIT.md) · [Product Boundaries](docs/PRODUCT_BOUNDARIES.md) · [Engineering Governance](docs/ENGINEERING_GOVERNANCE.md) · [Security Policy](SECURITY.md)
 
-<sub>Canonical repository identity · Blueprint edition</sub>
-
 </div>
 
 ---
+
+<div align="center">
+
+<img src="./assets/branding/vectolith-blueprint.svg" alt="Vectolith geometric emblem technical blueprint" width="100%" />
+
+<sub>Canonical repository identity · Blueprint edition</sub>
+
+</div>
 
 ## Company
 
