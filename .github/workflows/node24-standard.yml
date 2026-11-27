@@ -1,0 +1,36 @@
+name: Reusable Node 24 CI
+
+on:
+  workflow_call:
+    inputs:
+      install-command:
+        type: string
+        default: npm ci
+      test-command:
+        type: string
+        default: npm test
+      build-command:
+        type: string
+        default: npm run build
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Install
+        run: ${{ inputs.install-command }}
+      - name: Test
+        run: ${{ inputs.test-command }}
+      - name: Build
+        if: ${{ inputs.build-command != '' }}
+        run: ${{ inputs.build-command }}
